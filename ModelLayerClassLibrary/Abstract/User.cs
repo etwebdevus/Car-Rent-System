@@ -5,11 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using ModelLayerClassLibrary.Utils;
 using System.Text.RegularExpressions;
-using ModelLayerClassLibrary.Interfaces;
 
 namespace ModelLayerClassLibrary.Abstract
 {
-    public abstract class User : IUser
+    public abstract class User
     {
         public int UserID { get; set; }
         public bool IsIndividual { get; set; }

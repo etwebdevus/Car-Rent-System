@@ -1,5 +1,4 @@
 ﻿using ModelLayerClassLibrary.Abstract;
-using ModelLayerClassLibrary.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace ModelLayerClassLibrary.Entities
 {
-    public class Rent : IRent
+    public class Rent
     {
         public int RentID { get; set; }
 
         public int CarID { get; set; }
-        public virtual ICar Car { get; set; }
+        public virtual Car Car { get; set; }
 
         public int UserID { get; set; }
         public virtual User User { get; set; }

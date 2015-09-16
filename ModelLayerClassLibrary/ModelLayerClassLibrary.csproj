@@ -56,14 +56,7 @@
     <Compile Include="Enum\EnumCategory.cs" />
     <Compile Include="Enum\EnumColor.cs" />
     <Compile Include="Enum\EnumState.cs" />
-    <Compile Include="Interfaces\ICar.cs" />
-    <Compile Include="Interfaces\IManufacturer.cs" />
-    <Compile Include="Interfaces\IModel.cs" />
-    <Compile Include="Interfaces\IRent.cs" />
-    <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Abstract\User.cs" />
-    <Compile Include="Interfaces\IUser.cs" />
-    <Compile Include="Interfaces\IWebAppRentSysDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Address.cs" />
     <Compile Include="Utils\PhoneNumber.cs" />

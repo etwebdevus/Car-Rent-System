@@ -4,13 +4,12 @@ using ModelLayerClassLibrary.Entities;
 using ModelLayerClassLibrary.Abstract;
 using ModelLayerClassLibrary.Utils;
 using ModelLayerClassLibrary.Enum;
-using ModelLayerClassLibrary.Interfaces;
 using System.Linq;
 
 namespace UnitTest
 {
     [TestClass]
-    public class UnitTest1
+    public class EntitiesTest
     {
         [TestMethod]
         public void ClientInstanceTest()
@@ -71,7 +70,8 @@ namespace UnitTest
             using (WebAppRentSysDbContext rentSysDbContext = new WebAppRentSysDbContext())
             {
                 rentSysDbContext.Clients.Add(client);
-            
+                rentSysDbContext.SaveChanges();
+
             //Assert
                 Client found = rentSysDbContext.Clients.OfType<Client>().FirstOrDefault(t => t.Name == "Hartur");
                 Assert.AreEqual(NameExp, found.Name);

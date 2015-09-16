@@ -15,12 +15,12 @@ namespace ModelLayerClassLibrary.Entities
         {
             rentSys.Clients.Add(new Client
             {
-                UserID = 1,
                 Name = "Hartur",
                 Address = new Address { City = "Recife", State = EnumState.PE, Number = 233 },
                 Email = "hbb@ecomp.poli.br",
                 PhoneNumber = new PhoneNumber { DDD = "81", Phone = "92471119" },
-                CreditCard = "45645465"
+                CreditCard = "45645465",
+                IDNumber = "43148833678"
             });
             base.Seed(rentSys);
         }
