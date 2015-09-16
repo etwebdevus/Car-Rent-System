@@ -12,7 +12,7 @@ namespace ModelLayerClassLibrary.Entities
     {
         public DbSet<Manufacturer> Manufacturers { get; set; }
         public DbSet<Model> Models { get; set; }
-        public DbSet<User> Clients { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<Car> Cars { get; set; }
         public DbSet<Rent> Rents { get; set; }
 

@@ -13,7 +13,7 @@ namespace ModelLayerClassLibrary.Entities
     {
         protected override void Seed(WebAppRentSysDbContext rentSys)
         {
-            rentSys.Clients.Add(new Client
+            rentSys.Users.Add(new Client
             {
                 Name = "Hartur",
                 Address = new Address { City = "Recife", State = EnumState.PE, Number = 233 },

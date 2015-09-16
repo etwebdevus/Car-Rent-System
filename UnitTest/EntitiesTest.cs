@@ -69,11 +69,11 @@ namespace UnitTest
             //Act
             using (WebAppRentSysDbContext rentSysDbContext = new WebAppRentSysDbContext())
             {
-                rentSysDbContext.Clients.Add(client);
+                rentSysDbContext.Users.Add(client);
                 rentSysDbContext.SaveChanges();
 
             //Assert
-                Client found = rentSysDbContext.Clients.OfType<Client>().FirstOrDefault(t => t.Name == "Hartur");
+                Client found = rentSysDbContext.Users.OfType<Client>().FirstOrDefault(t => t.Name == "Hartur");
                 Assert.AreEqual(NameExp, found.Name);
             }
         }
