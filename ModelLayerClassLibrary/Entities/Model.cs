@@ -10,7 +10,8 @@ namespace ModelLayerClassLibrary.Entities
     {
         public int ModelID { get; set; }
         public string Name { get; set; }
-        public decimal Engine { get; set; }
+        public double Engine { get; set; }
+        public int Category { get; set; }
 
         public int ManufacturerID { get; set; }
         public virtual Manufacturer Manufacturer { get; set; }

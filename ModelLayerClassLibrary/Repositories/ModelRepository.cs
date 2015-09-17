@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ModelLayerClassLibrary.Repositories
 {
-    class ModelRepository : IRepository<Model>
+    public class ModelRepository : IRepository<Model>
     {
         private WebAppRentSysDbContext _context;
 

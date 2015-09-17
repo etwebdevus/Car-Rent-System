@@ -17,7 +17,7 @@ namespace ModelLayerClassLibrary.Entities
         //public string Email { get; set; }
         //public PhoneNumber PhoneNumber { get; set; }
         //public Address Address { get; set; }
-        public string CreditCard { get; set; }
+        public CreditCard CreditCard { get; set; }
 
         public Client() { }
     }
