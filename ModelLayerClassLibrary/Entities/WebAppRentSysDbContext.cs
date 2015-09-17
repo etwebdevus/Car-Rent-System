@@ -25,12 +25,11 @@ namespace ModelLayerClassLibrary.Entities
         {
             base.OnModelCreating(modelBuilder);
 
-            Database.SetInitializer<WebAppRentSysDbContext>(new WebAppDbContextInitializer());
-
-            modelBuilder.Entity<Manufacturer>().HasMany<Model>(t => t.Models).WithRequired(t => t.Manufacturer).HasForeignKey(t => t.ManufacturerID).WillCascadeOnDelete(false);
-
             modelBuilder.Entity<Client>().ToTable("Clients");
 
+            modelBuilder.Entity<Manufacturer>().HasMany<Model>(t => t.Models).WithRequired(t => t.Manufacturer).HasForeignKey(t => t.ManufacturerID).WillCascadeOnDelete(false);
         }
+
+        public System.Data.Entity.DbSet<ModelLayerClassLibrary.Entities.Client> Clients { get; set; }
     }
 }

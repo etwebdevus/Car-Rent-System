@@ -11,14 +11,8 @@ namespace ModelLayerClassLibrary.Entities
 {
     public class Client : User
     {
-        //public int UserID { get; set; }
-        //public string Name { get; set; }
-        //public string IDNumber { get; set; }
-        //public string Email { get; set; }
-        //public PhoneNumber PhoneNumber { get; set; }
-        //public Address Address { get; set; }
         public CreditCard CreditCard { get; set; }
 
-        public Client() { }
+        public Client() : base() { }
     }
 }

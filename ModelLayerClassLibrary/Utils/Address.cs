@@ -11,11 +11,18 @@ namespace ModelLayerClassLibrary.Utils
     {
         public EnumState State { get; set; }
         public string City { get; set; }
+        public string Street { get; set; }
+        public string District { get; set; }
         public int Number { get; set; }
 
         public bool IsValid()
         {
             return true;
+        }
+
+        public override string ToString()
+        {
+            return String.Format("{0} {1} {2} {3} - {4}", Street, Number, District, City, State);
         }
     }
 }
