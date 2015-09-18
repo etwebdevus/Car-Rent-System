@@ -59,6 +59,7 @@ C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\WebApplication.dll.
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\WebApplication.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\WebApplication.pdb
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Antlr3.Runtime.dll
+C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\AutoMapper.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\EntityFramework.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\EntityFramework.SqlServer.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Microsoft.AspNet.Identity.Core.dll
@@ -86,6 +87,7 @@ C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\System.Web.WebPages
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\System.Web.WebPages.Razor.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\WebGrease.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\ModelLayerClassLibrary.pdb
+C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\AutoMapper.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\EntityFramework.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\EntityFramework.SqlServer.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\System.Web.Helpers.xml

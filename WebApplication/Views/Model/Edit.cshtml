@@ -1,4 +1,4 @@
-﻿@model ModelLayerClassLibrary.Entities.Model
+﻿@model WebApplication.ViewModel.ModelViewModel
 
 @{
     ViewBag.Title = "Edit";
@@ -42,9 +42,9 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ManufacturerID, "ManufacturerID", new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.ManufacturerID, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("ManufacturerID", String.Empty)
+                @Html.DropDownListFor(model => model.ManufacturerID, Model.Manufacturers)
                 @Html.ValidationMessageFor(model => model.ManufacturerID)
             </div>
         </div>
