@@ -43,16 +43,7 @@ namespace WebApplication.Controllers
         // GET: /Model/Create
         public ActionResult Create()
         {
-            Mapper.Reset();
-            Mapper.CreateMap<ManufacturerRepository, ModelViewModel>().ForMember(dest => dest.Manufacturers, opt => opt.MapFrom(src => new SelectList(src.GetAll(), "ManufacturerID", "Name")))
-                                                                      .ForMember(dest => dest.Category, opt => opt.MapFrom(src => 0))
-                                                                      .ForMember(dest => dest.Engine, opt => opt.MapFrom(src => 0))
-                                                                      .ForMember(dest => dest.ManufacturerID, opt => opt.MapFrom(src => 1))
-                                                                      .ForMember(dest => dest.Manufacturer, opt => opt.MapFrom(src => new Manufacturer()))
-                                                                      .ForMember(dest => dest.Name, opt => opt.MapFrom(src => ""))
-                                                                      .ForMember(dest => dest.ModelID, opt => opt.MapFrom(src => 0));
-            
-            ModelViewModel mvmCreate = Mapper.Map<ManufacturerRepository, ModelViewModel>(manuRepo);
+            ModelViewModel mvmCreate = Mapper.Map<Model, ModelViewModel>(null);
 
             return View(mvmCreate);
         }
@@ -67,14 +58,7 @@ namespace WebApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                //Model model = Mapper.Map<ModelViewModel, Model>(mvm);
-                Model model = new Model
-                {
-                    Category = mvmCreate.Category,
-                    Engine = mvmCreate.Engine,
-                    ManufacturerID = mvmCreate.ManufacturerID,
-                    Name = mvmCreate.Name
-                };
+                Model model = Mapper.Map<ModelViewModel, Model>(mvmCreate);
 
                 modelRepo.Add(model);
 
@@ -84,21 +68,6 @@ namespace WebApplication.Controllers
 
             return View(mvmCreate);
         }
-
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Create([Bind(Include = "ModelID,Name,Engine,Category,ManufacturerID")] Model model)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        modelRepo.Add(model);
-
-        //        modelRepo.Save();
-        //        return RedirectToAction("Index");
-        //    }
-
-        //    return View(model);
-        //}
 
         // GET: /Model/Edit/5
         public ActionResult Edit(int? id)
@@ -113,36 +82,10 @@ namespace WebApplication.Controllers
                 return HttpNotFound();
             }
 
-            Mapper.Reset();
-            Mapper.CreateMap<ManufacturerRepository, ModelViewModel>().ForMember(dest => dest.Manufacturers, opt => opt.MapFrom(src => new SelectList(src.GetAll(), "ManufacturerID", "Name")))
-                                                                      .ForMember(dest => dest.Category, opt => opt.MapFrom(src => model.Category))
-                                                                      .ForMember(dest => dest.Engine, opt => opt.MapFrom(src => model.Engine))
-                                                                      .ForMember(dest => dest.ManufacturerID, opt => opt.MapFrom(src => model.ManufacturerID))
-                                                                      .ForMember(dest => dest.Manufacturer, opt => opt.MapFrom(src => model.Manufacturer))
-                                                                      .ForMember(dest => dest.Name, opt => opt.MapFrom(src => model.Name))
-                                                                      .ForMember(dest => dest.ModelID, opt => opt.MapFrom(src => model.ModelID));
-
-            ModelViewModel mvmEdit = Mapper.Map<ManufacturerRepository, ModelViewModel>(manuRepo);
+            ModelViewModel mvmEdit = Mapper.Map<Model, ModelViewModel>(model);
 
             return View(mvmEdit);
         }
-
-        // POST: /Model/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Edit([Bind(Include="ModelID,Name,Engine,Category,ManufacturerID")] Model model)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        modelRepo.Update(model);
-        //        modelRepo.Save();
-        //        return RedirectToAction("Index");
-        //    }
-        //    //ViewBag.ManufacturerID = new SelectList(manuRepo.GetAll(), "ManufacturerID", "Name", model.ManufacturerID);
-        //    return View(model);
-        //}
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -150,19 +93,15 @@ namespace WebApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                Model model = new Model
-                {
-                    Category = mvmEdit.Category,
-                    Engine = mvmEdit.Engine,
-                    ManufacturerID = mvmEdit.ManufacturerID,
-                    Name = mvmEdit.Name
-                };
+                //Mode
+
+                Model model = Mapper.Map<ModelViewModel, Model>(mvmEdit);
 
                 modelRepo.Update(model);
                 modelRepo.Save();
                 return RedirectToAction("Index");
             }
-            //ViewBag.ManufacturerID = new SelectList(manuRepo.GetAll(), "ManufacturerID", "Name", model.ManufacturerID);
+
             return View(mvmEdit);
         }
 
