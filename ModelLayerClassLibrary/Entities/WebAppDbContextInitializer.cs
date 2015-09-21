@@ -220,7 +220,7 @@ namespace ModelLayerClassLibrary.Entities
                 Email = "hbb@ecomp.poli.br",
                 PhoneNumber = new PhoneNumber { DDD = "81", Phone = "92471119" },
                 CreditCard = new CreditCard{Month = 12, Year = 2016, Name = "HARTUR", Number = "456456456", SecurityNumber = "555"},
-                IDNumber = "43148833678",
+                IDNumber = "21919065679",
                 IsIndividual = true
             });
 
@@ -231,7 +231,7 @@ namespace ModelLayerClassLibrary.Entities
                 Email = "ebb2@cin.ufpe.br",
                 PhoneNumber = new PhoneNumber { DDD = "81", Phone = "82432149" },
                 CreditCard = new CreditCard { Month = 12, Year = 2016, Name = "EDUARDO", Number = "456456456", SecurityNumber = "555" },
-                IDNumber = "43148833678",
+                IDNumber = "73521635570",
                 IsIndividual = true
             });
 

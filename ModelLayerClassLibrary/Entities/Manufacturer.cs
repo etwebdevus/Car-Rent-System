@@ -10,6 +10,7 @@ namespace ModelLayerClassLibrary.Entities
     public class Manufacturer
     {
         public int ManufacturerID { get; set; }
+        [Display(Name = "Manufacturer")]
         public string Name { get; set; }
         public virtual List<Model> Models { get; set; }
 

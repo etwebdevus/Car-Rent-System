@@ -1,0 +1,36 @@
+﻿@model ModelLayerClassLibrary.Entities.Client
+
+<div>
+    <h4>@Html.DisplayFor(model => model.Name)</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IsIndividual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsIndividual)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserID }) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.UserID })
+</p>

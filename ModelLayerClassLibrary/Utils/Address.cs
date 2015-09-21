@@ -15,10 +15,7 @@ namespace ModelLayerClassLibrary.Utils
         public string District { get; set; }
         public int Number { get; set; }
 
-        public bool IsValid()
-        {
-            return true;
-        }
+        public Address() { }
 
         public override string ToString()
         {

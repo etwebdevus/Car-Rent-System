@@ -21,9 +21,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Engine)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Category)
-            </th>
             <th></th>
         </tr>
 
@@ -40,14 +37,11 @@
                     @Html.DisplayFor(modelItem => item.Engine)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Category)
-                </td>
-                <td>
 
                     @Ajax.ActionLink("Details", "ModelDetails", new { id = item.ModelID }, new AjaxOptions
                                                                                                            {
                                                                                                                HttpMethod = "GET",
-                                                                                                               UpdateTargetId = "Details",
+                                                                                                               UpdateTargetId = "ModelDetails",
                                                                                                                InsertionMode = InsertionMode.Replace
                                                                                                            })
                 </td>

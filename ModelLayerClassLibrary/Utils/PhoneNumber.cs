@@ -16,11 +16,6 @@ namespace ModelLayerClassLibrary.Utils
 
         public PhoneNumber() { }
 
-        public bool IsValid()
-        {
-            return true;
-        }
-
         public override string ToString()
         {
             return string.Format("({0}) {1}", DDD, Phone);

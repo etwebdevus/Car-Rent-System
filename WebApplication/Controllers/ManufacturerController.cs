@@ -21,21 +21,6 @@ namespace WebApplication.Controllers
             return View(manuRepo.GetAll().OrderBy(x => x.Name));
         }
 
-        // GET: /Manufacturer/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Manufacturer manufacturer = manuRepo.GetByID(id.Value);
-            if (manufacturer == null)
-            {
-                return HttpNotFound();
-            }
-            return View(manufacturer);
-        }
-
         // GET: /Manufacturer/Create
         public ActionResult Create()
         {

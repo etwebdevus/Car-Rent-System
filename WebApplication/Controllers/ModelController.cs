@@ -144,12 +144,12 @@ namespace WebApplication.Controllers
             }
             return PartialView("_ModelDetails", model);
         }
-        [ChildActionOnly]
+        
         public PartialViewResult SortByName()
         {
             return PartialView("_ModelList", this.modelRepo.GetAll().OrderBy(x => x.Name));
         }
-        [ChildActionOnly]
+
         public PartialViewResult SortByManufacturer()
         {
             return PartialView("_ModelList", this.modelRepo.GetAll().OrderBy(x => x.Manufacturer.Name));

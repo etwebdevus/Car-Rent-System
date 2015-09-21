@@ -14,6 +14,6 @@ C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\bin\Debug\Entit
 C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\bin\Debug\EntityFramework.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\obj\Debug\ModelLayerClassLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\obj\Debug\ModelLayerClassLibrary.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\obj\Debug\ModelLayerClassLibrary.pdb
-C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\obj\Debug\ModelLayerClassLibrary.csprojResolveAssemblyReference.cache

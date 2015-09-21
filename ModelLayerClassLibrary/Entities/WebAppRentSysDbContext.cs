@@ -27,7 +27,7 @@ namespace ModelLayerClassLibrary.Entities
 
             modelBuilder.Entity<Client>().ToTable("Clients");
 
-            modelBuilder.Entity<Manufacturer>().HasMany<Model>(t => t.Models).WithRequired(t => t.Manufacturer).HasForeignKey(t => t.ManufacturerID).WillCascadeOnDelete(false);
+            modelBuilder.Entity<Manufacturer>().HasMany<Model>(t => t.Models).WithRequired(t => t.Manufacturer).HasForeignKey(t => t.ManufacturerID).WillCascadeOnDelete(true);
         }
 
         public System.Data.Entity.DbSet<ModelLayerClassLibrary.Entities.Client> Clients { get; set; }

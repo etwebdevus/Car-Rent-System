@@ -22,18 +22,18 @@ namespace WebApplication.Controllers
         }
 
         // GET: /Client/Details/5
-        public ActionResult Details(int? id)
+        public PartialViewResult Details(int? id)
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return PartialView("_ObjectNotFound");
             }
             Client client = (Client) userRepo.GetByID(id.Value);
             if (client == null)
             {
-                return HttpNotFound();
+                return PartialView("_ObjectNotFound");
             }
-            return View(client);
+            return PartialView("_ClientDetails", client);
         }
 
         // GET: /Client/Create
@@ -123,6 +123,16 @@ namespace WebApplication.Controllers
                 userRepo.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public PartialViewResult SortByName()
+        {
+            return PartialView("_ClientList", userRepo.GetAll().OfType<Client>().OrderBy(x => x.Name));
+        }
+
+        public PartialViewResult SortByID()
+        {
+            return PartialView("_ClientList", userRepo.GetAll().OfType<Client>().OrderBy(x => x.IDNumber));
         }
     }
 }

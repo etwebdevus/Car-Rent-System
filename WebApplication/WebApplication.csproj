@@ -227,22 +227,22 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Manufacturer\Create.cshtml" />
     <Content Include="Views\Manufacturer\Delete.cshtml" />
-    <Content Include="Views\Manufacturer\Details.cshtml" />
     <Content Include="Views\Manufacturer\Edit.cshtml" />
     <Content Include="Views\Manufacturer\Index.cshtml" />
     <Content Include="Views\Model\Create.cshtml" />
     <Content Include="Views\Model\Delete.cshtml" />
-    <Content Include="Views\Model\Details.cshtml" />
     <Content Include="Views\Model\Edit.cshtml" />
     <Content Include="Views\Model\Index.cshtml" />
     <Content Include="Views\Client\Create.cshtml" />
     <Content Include="Views\Client\Delete.cshtml" />
-    <Content Include="Views\Client\Details.cshtml" />
     <Content Include="Views\Client\Edit.cshtml" />
     <Content Include="Views\Client\Index.cshtml" />
     <Content Include="Views\Model\_ModelDetails.cshtml" />
-    <Content Include="Views\Model\_ObjectNotFound.cshtml" />
+    <Content Include="Views\Shared\_ObjectNotFound.cshtml" />
     <Content Include="Views\Model\_ModelList.cshtml" />
+    <Content Include="Views\Client\_ClientList.cshtml" />
+    <Content Include="Views\Client\_ClientDetails.cshtml" />
+    <Content Include="Views\Manufacturer\_ManufacturerList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
