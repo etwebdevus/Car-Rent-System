@@ -43,7 +43,7 @@ namespace WebApplication.Controllers
         // GET: /Model/Create
         public ActionResult Create()
         {
-            ModelViewModel mvmCreate = Mapper.Map<Model, ModelViewModel>(null);
+            ModelViewModel mvmCreate = Mapper.Map<Model, ModelViewModel>(new Model());
 
             return View(mvmCreate);
         }
@@ -129,6 +129,30 @@ namespace WebApplication.Controllers
             modelRepo.Delete(model.ModelID);
             modelRepo.Save();
             return RedirectToAction("Index");
+        }
+
+        public PartialViewResult ModelDetails(int? id)
+        {
+            if (id == null)
+            {
+                return PartialView("_ObjectNotFound");
+            }
+            Model model = modelRepo.GetByID(id.Value);
+            if (model == null)
+            {
+                return PartialView("_ObjectNotFound");
+            }
+            return PartialView("_ModelDetails", model);
+        }
+
+        public PartialViewResult SortByName()
+        {
+            return PartialView("_ModelList", this.modelRepo.GetAll().OrderBy(x => x.Name));
+        }
+
+        public PartialViewResult SortByManufacturer()
+        {
+            return PartialView("_ModelList", this.modelRepo.GetAll().OrderBy(x => x.Manufacturer.Name));
         }
 
         protected override void Dispose(bool disposing)

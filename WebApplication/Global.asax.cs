@@ -22,12 +22,12 @@ namespace WebApplication
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             
             Database.SetInitializer<WebAppRentSysDbContext>(new WebAppDbContextInitializer());
-            using (WebAppRentSysDbContext ctx = new WebAppRentSysDbContext()) { 
-            Mapper.CreateMap<Model, ModelViewModel>().ForMember(dest => dest.Manufacturers, opt => opt.MapFrom(src =>
-                new SelectList(ctx.Manufacturers.ToList(), "ManufacturerID", "Name")));
-            Mapper.CreateMap<ModelViewModel, Model>();
-            }
 
+            //using (WebAppRentSysDbContext ctx = new WebAppRentSysDbContext()) {
+                Mapper.CreateMap<Model, ModelViewModel>().ForMember(dest => dest.Manufacturers, opt => opt.MapFrom(src =>
+                    new SelectList((new WebAppRentSysDbContext()).Manufacturers.ToList(), "ManufacturerID", "Name")));
+                Mapper.CreateMap<ModelViewModel, Model>();
+            //}
         }
     }
 }

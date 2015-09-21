@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ModelLayerClassLibrary.Entities.Model>
+
+<table class="table">
+        <tr>
+            <th>
+                @Ajax.ActionLink(Html.DisplayNameFor(model => model.Manufacturer.Name).ToString(), "SortByManufacturer", new AjaxOptions
+                                                                                                           {
+                                                                                                               HttpMethod = "GET",
+                                                                                                               UpdateTargetId = "ModelList",
+                                                                                                               InsertionMode = InsertionMode.Replace
+                                                                                                           })
+            </th>
+            <th>
+                @Ajax.ActionLink(Html.DisplayNameFor(model => model.Name).ToString(), "SortByName", new AjaxOptions
+                                                                                                           {
+                                                                                                               HttpMethod = "GET",
+                                                                                                               UpdateTargetId = "ModelList",
+                                                                                                               InsertionMode = InsertionMode.Replace
+                                                                                                           })
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Engine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Manufacturer.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Engine)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td>
+
+                    @Ajax.ActionLink("Details", "ModelDetails", new { id = item.ModelID }, new AjaxOptions
+                                                                                                           {
+                                                                                                               HttpMethod = "GET",
+                                                                                                               UpdateTargetId = "Details",
+                                                                                                               InsertionMode = InsertionMode.Replace
+                                                                                                           })
+                </td>
+            </tr>
+        }
+</table>
