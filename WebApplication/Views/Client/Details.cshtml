@@ -1,9 +1,5 @@
 ﻿@model ModelLayerClassLibrary.Entities.Client
 
-@{
-    ViewBag.Title = "Details";
-}
-
 <h2>Details</h2>
 
 <div>
@@ -47,8 +43,7 @@
         </dt>
 
         <dd>
-            @*@Html.DisplayFor(model => model.Address)*@
-            @Model.Address.ToString()
+            @Html.DisplayFor(model => model.Address)
         </dd>
 
         <dt>
@@ -56,8 +51,7 @@
         </dt>
 
         <dd>
-            @*@Html.DisplayFor(model => model.Address)*@
-            @Model.CreditCard.ToString()
+            @Html.DisplayFor(model => model.Address)
         </dd>
 
         <dt>
@@ -65,8 +59,7 @@
         </dt>
 
         <dd>
-            @*@Html.DisplayFor(model => model.PhoneNumber)*@
-            @Model.PhoneNumber.ToString()
+            @Html.DisplayFor(model => model.PhoneNumber
         </dd>
 
     </dl>

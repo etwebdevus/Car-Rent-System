@@ -25,20 +25,20 @@ namespace WebApplication.Controllers
             return View(modelRepo.GetAll().OrderBy(x => x.Name));
         }
 
-        // GET: /Model/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Model model = modelRepo.GetByID(id.Value);
-            if (model == null)
-            {
-                return HttpNotFound();
-            }
-            return View(model);
-        }
+        //// GET: /Model/Details/5
+        //public ActionResult Details(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Model model = modelRepo.GetByID(id.Value);
+        //    if (model == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(model);
+        //}
 
         // GET: /Model/Create
         public ActionResult Create()
@@ -130,7 +130,7 @@ namespace WebApplication.Controllers
             modelRepo.Save();
             return RedirectToAction("Index");
         }
-
+        
         public PartialViewResult ModelDetails(int? id)
         {
             if (id == null)
@@ -144,12 +144,12 @@ namespace WebApplication.Controllers
             }
             return PartialView("_ModelDetails", model);
         }
-
+        [ChildActionOnly]
         public PartialViewResult SortByName()
         {
             return PartialView("_ModelList", this.modelRepo.GetAll().OrderBy(x => x.Name));
         }
-
+        [ChildActionOnly]
         public PartialViewResult SortByManufacturer()
         {
             return PartialView("_ModelList", this.modelRepo.GetAll().OrderBy(x => x.Manufacturer.Name));

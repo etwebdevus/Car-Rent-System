@@ -4,18 +4,24 @@ using System.Linq;
 using System.Web;
 using ModelLayerClassLibrary.Entities;
 using System.Web.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplication.ViewModel
 {
     public class ModelViewModel
     {
         public int ModelID { get; set; }
+        [Required]
+        [MaxLength(20)]
+        [Display(Name = "Model")]
         public string Name { get; set; }
+        [Required]
+        [Range(0.5,4)]
         public double Engine { get; set; }
+        [Required]
         public int Category { get; set; }
-
+        [Required]
         public int ManufacturerID { get; set; }
-        public virtual Manufacturer Manufacturer { get; set; }
 
         public SelectList Manufacturers { get; set; }
     }

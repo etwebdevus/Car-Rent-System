@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ModelLayerClassLibrary.Entities;
+using ModelLayerClassLibrary.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -22,12 +23,10 @@ namespace WebApplication
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             
             Database.SetInitializer<WebAppRentSysDbContext>(new WebAppDbContextInitializer());
-
-            //using (WebAppRentSysDbContext ctx = new WebAppRentSysDbContext()) {
-                Mapper.CreateMap<Model, ModelViewModel>().ForMember(dest => dest.Manufacturers, opt => opt.MapFrom(src =>
-                    new SelectList((new WebAppRentSysDbContext()).Manufacturers.ToList(), "ManufacturerID", "Name")));
-                Mapper.CreateMap<ModelViewModel, Model>();
-            //}
+            
+            Mapper.CreateMap<Model, ModelViewModel>().ForMember(dest => dest.Manufacturers, opt => opt.MapFrom(src =>
+                new SelectList((new ManufacturerRepository(new WebAppRentSysDbContext())).GetAll(), "ManufacturerID", "Name")));
+            Mapper.CreateMap<ModelViewModel, Model>();
         }
     }
 }
