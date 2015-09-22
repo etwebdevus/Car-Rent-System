@@ -1,0 +1,36 @@
+﻿@model WebApplication.ViewModel.Car.ListDetailsDeleteCarViewModel
+
+<div>
+    <h4>@Html.DisplayFor(model => model.ManufacturerName) @Html.DisplayFor(model => model.ModelName)</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LicensePlate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LicensePlate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModelEngine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModelEngine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CarColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarColor)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CarID }) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.CarID })
+</p>

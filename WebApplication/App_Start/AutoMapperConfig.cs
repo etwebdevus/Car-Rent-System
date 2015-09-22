@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using WebApplication.ViewModel.Model;
 using WebApplication.ViewModel.Manufacturer;
 using WebApplication.ViewModel.Client;
+using WebApplication.ViewModel.Car;
 using ModelLayerClassLibrary.Utils;
 using ModelLayerClassLibrary.Enum;
 
@@ -28,12 +29,28 @@ namespace WebApplication.App_Start
                 .ForMember(dest => dest.Manufacturers, opt => opt.MapFrom(src =>
                     new SelectList((new ManufacturerRepository(new WebAppRentSysDbContext())).GetAll(), "ManufacturerID", "Name")));
 
-            Mapper.CreateMap<Model, ListDetailsDeleteModelViewModel>().ForMember(dest => dest.ManufacturerName, opt => opt.MapFrom(src => src.Manufacturer.Name));
-
             Mapper.CreateMap<CreateEditModelViewModel, Model>();
+
+            Mapper.CreateMap<Model, ListDetailsDeleteModelViewModel>().ForMember(dest => dest.ManufacturerName, opt => opt.MapFrom(src => src.Manufacturer.Name));
 
             Mapper.CreateMap<ListDetailsDeleteModelViewModel, Model>();
 
+
+            //------------CAR------------//
+            Mapper.CreateMap<Car, ListDetailsDeleteCarViewModel>()
+                .ForMember(dest => dest.ManufacturerName, opt => opt.MapFrom(src => src.Model.Manufacturer.Name));
+                //.ForMember(dest => dest.ModelName, opt => opt.MapFrom(src => src.Model.Name));
+
+            Mapper.CreateMap<ListDetailsDeleteCarViewModel, Car>();
+
+            Mapper.CreateMap<Car, CreateEditCarViewModel>()
+                .ForMember(dst => dst.ManufacturerID, opt => opt.MapFrom(src => src.Model.ManufacturerID))
+                .ForMember(dest => dest.Manufacturers, opt => opt.MapFrom(src =>
+                    new SelectList((new ManufacturerRepository(new WebAppRentSysDbContext())).GetAll(), "ManufacturerID", "Name")))
+                .ForMember(dest => dest.Models, opt => opt.MapFrom(src =>
+                    new SelectList((new ModelRepository(new WebAppRentSysDbContext())).GetAll(), "ModelID", "Name")));
+
+            Mapper.CreateMap<CreateEditCarViewModel, Car>();
 
             //------------CLIENT------------//
             Mapper.CreateMap<Client, ClientViewModel>();

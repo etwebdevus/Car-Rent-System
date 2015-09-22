@@ -1,0 +1,55 @@
+﻿@model IEnumerable<WebApplication.ViewModel.Car.ListDetailsDeleteCarViewModel>
+
+<table class="table">
+    <tr>
+        <th>
+            @Ajax.ActionLink(Html.DisplayNameFor(model => model.ModelName).ToString(), "SortByName", new AjaxOptions
+                                                                                                           {
+                                                                                                               HttpMethod = "GET",
+                                                                                                               UpdateTargetId = "CarList",
+                                                                                                               InsertionMode = InsertionMode.Replace
+                                                                                                           })
+        </th>
+        <th>
+            @Ajax.ActionLink(Html.DisplayNameFor(model => model.LicensePlate).ToString(), "SortByLicensePlate", new AjaxOptions
+                                                                                                           {
+                                                                                                               HttpMethod = "GET",
+                                                                                                               UpdateTargetId = "CarList",
+                                                                                                               InsertionMode = InsertionMode.Replace
+                                                                                                           })
+        </th>
+        <th>
+            @Ajax.ActionLink(Html.DisplayNameFor(model => model.ModelEngine).ToString(), "SortByEngine", new AjaxOptions
+                                                                                                           {
+                                                                                                               HttpMethod = "GET",
+                                                                                                               UpdateTargetId = "CarList",
+                                                                                                               InsertionMode = InsertionMode.Replace
+                                                                                                           })
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModelName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LicensePlate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModelEngine)
+            </td>
+            <td>
+                @Ajax.ActionLink("Details", "Details", new { id = item.CarID }, new AjaxOptions
+                                                                                    {
+                                                                                        HttpMethod = "GET",
+                                                                                        UpdateTargetId = "CarDetails",
+                                                                                        InsertionMode = InsertionMode.Replace
+                                                                                    })
+            </td>
+        </tr>
+    }
+
+</table>
