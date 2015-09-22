@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using ModelLayerClassLibrary.Entities;
 using ModelLayerClassLibrary.Repositories;
+using WebApplication.ViewModel.Manufacturer;
+using AutoMapper;
 
 namespace WebApplication.Controllers
 {
@@ -18,7 +20,15 @@ namespace WebApplication.Controllers
         // GET: /Manufacturer/
         public ActionResult Index()
         {
-            return View(manuRepo.GetAll().OrderBy(x => x.Name));
+            List<Manufacturer> manufacturers = manuRepo.GetAll().OrderBy(x => x.Name).ToList();
+
+            List<ManufacturerViewModel> manuViewModel = new List<ManufacturerViewModel>();
+
+            foreach (Manufacturer manu in manufacturers)
+            {
+                manuViewModel.Add(Mapper.Map<Manufacturer, ManufacturerViewModel>(manu));
+            }
+            return View(manuViewModel);
         }
 
         // GET: /Manufacturer/Create
@@ -32,11 +42,11 @@ namespace WebApplication.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="ManufacturerID,Name")] Manufacturer manufacturer)
+        public ActionResult Create([Bind(Include = "ManufacturerID,Name")] ManufacturerViewModel manufacturer)
         {
             if (ModelState.IsValid)
             {
-                manuRepo.Add(manufacturer);
+                manuRepo.Add(Mapper.Map< ManufacturerViewModel, Manufacturer>(manufacturer));
                 manuRepo.Save();
                 return RedirectToAction("Index");
             }
@@ -51,7 +61,7 @@ namespace WebApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Manufacturer manufacturer = manuRepo.GetByID(id.Value);
+            ManufacturerViewModel manufacturer = Mapper.Map<Manufacturer, ManufacturerViewModel>(manuRepo.GetByID(id.Value));
             if (manufacturer == null)
             {
                 return HttpNotFound();
@@ -64,11 +74,11 @@ namespace WebApplication.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="ManufacturerID,Name")] Manufacturer manufacturer)
+        public ActionResult Edit([Bind(Include = "ManufacturerID,Name")] ManufacturerViewModel manufacturer)
         {
             if (ModelState.IsValid)
             {
-                manuRepo.Update(manufacturer);
+                manuRepo.Update(Mapper.Map < ManufacturerViewModel, Manufacturer>(manufacturer));
                 manuRepo.Save();
                 return RedirectToAction("Index");
             }
@@ -82,7 +92,7 @@ namespace WebApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Manufacturer manufacturer = manuRepo.GetByID(id.Value);
+            ManufacturerViewModel manufacturer = Mapper.Map<Manufacturer, ManufacturerViewModel>(manuRepo.GetByID(id.Value));
             if (manufacturer == null)
             {
                 return HttpNotFound();

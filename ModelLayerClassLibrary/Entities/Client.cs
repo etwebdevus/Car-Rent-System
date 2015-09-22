@@ -11,7 +11,6 @@ namespace ModelLayerClassLibrary.Entities
 {
     public class Client : User
     {
-        [Display(Name = "Credit Card")]
         public CreditCard CreditCard { get; set; }
 
         public Client() : base() { }

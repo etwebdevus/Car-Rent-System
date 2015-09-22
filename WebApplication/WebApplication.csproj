@@ -159,7 +159,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\DbConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
@@ -175,7 +177,10 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModel\ModelViewModel.cs" />
+    <Compile Include="ViewModel\Client\ClientViewModel.cs" />
+    <Compile Include="ViewModel\Manufacturer\ManufacturerViewModel.cs" />
+    <Compile Include="ViewModel\Model\CreateEditModelViewModel.cs" />
+    <Compile Include="ViewModel\Model\ListDetailsDeleteModelViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />

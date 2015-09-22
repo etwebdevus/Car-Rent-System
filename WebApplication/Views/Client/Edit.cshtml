@@ -1,4 +1,4 @@
-﻿@model ModelLayerClassLibrary.Entities.Client
+﻿@model WebApplication.ViewModel.Client.ClientViewModel
 
 @{
     ViewBag.Title = "Edit";
@@ -50,28 +50,92 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.PhoneNumber, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.PhoneNumberDDD, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.PhoneNumber.DDD)
-                @Html.ValidationMessageFor(model => model.PhoneNumber.DDD)
-                @Html.EditorFor(model => model.PhoneNumber.Phone)
-                @Html.ValidationMessageFor(model => model.PhoneNumber.Phone)
+                @Html.EditorFor(model => model.PhoneNumberDDD)
+                @Html.ValidationMessageFor(model => model.PhoneNumberDDD)
+                @Html.EditorFor(model => model.PhoneNumberPhone)
+                @Html.ValidationMessageFor(model => model.PhoneNumberPhone)
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Address, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.AddressStreet, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Address)
-                @Html.ValidationMessageFor(model => model.Address)
+                @Html.EditorFor(model => model.AddressStreet)
+                @Html.ValidationMessageFor(model => model.AddressStreet)
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CreditCard, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.AddressNumber, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.CreditCard)
-                @Html.ValidationMessageFor(model => model.CreditCard)
+                @Html.EditorFor(model => model.AddressNumber)
+                @Html.ValidationMessageFor(model => model.AddressNumber)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AddressDistrict, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AddressDistrict)
+                @Html.ValidationMessageFor(model => model.AddressDistrict)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AddressCity, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AddressCity)
+                @Html.ValidationMessageFor(model => model.AddressCity)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AddressState, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AddressState)
+                @Html.ValidationMessageFor(model => model.AddressState)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CreditCardName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CreditCardName)
+                @Html.ValidationMessageFor(model => model.CreditCardName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CreditCardNumber, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CreditCardNumber)
+                @Html.ValidationMessageFor(model => model.CreditCardNumber)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CreditCardSecurityNumber, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CreditCardSecurityNumber)
+                @Html.ValidationMessageFor(model => model.CreditCardSecurityNumber)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CreditCardMonth, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CreditCardMonth)
+                @Html.ValidationMessageFor(model => model.CreditCardMonth)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CreditCardYear, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CreditCardYear)
+                @Html.ValidationMessageFor(model => model.CreditCardYear)
             </div>
         </div>
 

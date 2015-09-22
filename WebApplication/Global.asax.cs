@@ -9,7 +9,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using WebApplication.ViewModel;
+using WebApplication.App_Start;
+using WebApplication.ViewModel.Model;
 
 namespace WebApplication
 {
@@ -21,12 +22,9 @@ namespace WebApplication
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            
-            Database.SetInitializer<WebAppRentSysDbContext>(new WebAppDbContextInitializer());
-            
-            Mapper.CreateMap<Model, ModelViewModel>().ForMember(dest => dest.Manufacturers, opt => opt.MapFrom(src =>
-                new SelectList((new ManufacturerRepository(new WebAppRentSysDbContext())).GetAll(), "ManufacturerID", "Name")));
-            Mapper.CreateMap<ModelViewModel, Model>();
+
+            MapperConfig.RegisterMappers();
+            DbConfig.RegisterDb();
         }
     }
 }

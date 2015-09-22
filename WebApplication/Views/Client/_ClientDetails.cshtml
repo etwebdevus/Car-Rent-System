@@ -1,9 +1,18 @@
-﻿@model ModelLayerClassLibrary.Entities.Client
+﻿@model WebApplication.ViewModel.Client.ClientViewModel
 
 <div>
     <h4>@Html.DisplayFor(model => model.Name)</h4>
 	<hr />
     <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumberDDD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumberDDD) @Html.DisplayFor(model => model.PhoneNumberPhone)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.IsIndividual)
         </dt>
@@ -26,6 +35,54 @@
 
         <dd>
             @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressStreet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressStreet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressDistrict)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressDistrict)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditCardNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditCardNumber)
         </dd>
 
     </dl>

@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using ModelLayerClassLibrary.Entities;
 using ModelLayerClassLibrary.Repositories;
+using WebApplication.ViewModel.Client;
+using AutoMapper;
 
 namespace WebApplication.Controllers
 {
@@ -18,7 +20,15 @@ namespace WebApplication.Controllers
         // GET: /Client/
         public ActionResult Index()
         {
-            return View(userRepo.GetAll().OfType<Client>().OrderBy(x => x.Name));
+            List<Client> clients = userRepo.GetAll().OfType<Client>().OrderBy(x => x.Name).ToList();
+            List<ClientViewModel> clientsViewModel = new List<ClientViewModel>();
+
+            foreach (Client client in clients)
+            {
+                clientsViewModel.Add(Mapper.Map<Client, ClientViewModel>(client));
+            }
+
+            return View(clientsViewModel);
         }
 
         // GET: /Client/Details/5
@@ -33,7 +43,7 @@ namespace WebApplication.Controllers
             {
                 return PartialView("_ObjectNotFound");
             }
-            return PartialView("_ClientDetails", client);
+            return PartialView("_ClientDetails", Mapper.Map<Client, ClientViewModel>(client));
         }
 
         // GET: /Client/Create
@@ -47,11 +57,11 @@ namespace WebApplication.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserID,IsIndividual,Name,IDNumber,Email,PhoneNumber,Address,CreditCard")] Client client)
+        public ActionResult Create(ClientViewModel client)
         {
             if (ModelState.IsValid)
             {
-                userRepo.Add(client);
+                userRepo.Add(Mapper.Map<ClientViewModel, Client>(client));
                 userRepo.Save();
                 return RedirectToAction("Index");
             }
@@ -71,7 +81,7 @@ namespace WebApplication.Controllers
             {
                 return HttpNotFound();
             }
-            return View(client);
+            return View(Mapper.Map<Client, ClientViewModel>(client));
         }
 
         // POST: /Client/Edit/5
@@ -79,11 +89,12 @@ namespace WebApplication.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserID,IsIndividual,Name,IDNumber,Email,PhoneNumber,Address,CreditCard")] Client client)
+        public ActionResult Edit(ClientViewModel client)
         {
             if (ModelState.IsValid)
             {
-                userRepo.Update(client);
+                var teste = (Mapper.Map<ClientViewModel, Client>(client));
+                userRepo.Update((Mapper.Map<ClientViewModel, Client>(client)));
                 userRepo.Save();
                 return RedirectToAction("Index");
             }
@@ -102,7 +113,7 @@ namespace WebApplication.Controllers
             {
                 return HttpNotFound();
             }
-            return View(client);
+            return View(Mapper.Map<Client, ClientViewModel>(client));
         }
 
         // POST: /Client/Delete/5
@@ -116,6 +127,30 @@ namespace WebApplication.Controllers
             return RedirectToAction("Index");
         }
 
+        public PartialViewResult SortByName()
+        {
+            List<Client> clients = userRepo.GetAll().OfType<Client>().OrderBy(x => x.Name).ToList();
+            List<ClientViewModel> clientsViewModel = new List<ClientViewModel>();
+
+            foreach (Client client in clients)
+            {
+                clientsViewModel.Add(Mapper.Map<Client, ClientViewModel>(client));
+            }
+            return PartialView("_ClientList", clientsViewModel);
+        }
+
+        public PartialViewResult SortByID()
+        {
+            List<Client> clients = userRepo.GetAll().OfType<Client>().OrderBy(x => x.IDNumber).ToList();
+            List<ClientViewModel> clientsViewModel = new List<ClientViewModel>();
+
+            foreach (Client client in clients)
+            {
+                clientsViewModel.Add(Mapper.Map<Client, ClientViewModel>(client));
+            }
+            return PartialView("_ClientList", clientsViewModel);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -123,16 +158,6 @@ namespace WebApplication.Controllers
                 userRepo.Dispose();
             }
             base.Dispose(disposing);
-        }
-
-        public PartialViewResult SortByName()
-        {
-            return PartialView("_ClientList", userRepo.GetAll().OfType<Client>().OrderBy(x => x.Name));
-        }
-
-        public PartialViewResult SortByID()
-        {
-            return PartialView("_ClientList", userRepo.GetAll().OfType<Client>().OrderBy(x => x.IDNumber));
         }
     }
 }

@@ -10,6 +10,7 @@ using ModelLayerClassLibrary.Entities;
 using ModelLayerClassLibrary.Repositories;
 using WebApplication.ViewModel;
 using AutoMapper;
+using WebApplication.ViewModel.Model;
 
 namespace WebApplication.Controllers
 {
@@ -22,7 +23,13 @@ namespace WebApplication.Controllers
         // GET: /Model/
         public ActionResult Index()
         {
-            return View(modelRepo.GetAll().OrderBy(x => x.Name));
+            List<Model> models = modelRepo.GetAll().OrderBy(x => x.Name).ToList();
+            List<ListDetailsDeleteModelViewModel> modelsViewModel = new List<ListDetailsDeleteModelViewModel>();
+            foreach (Model model in models)
+            {
+                modelsViewModel.Add(Mapper.Map<Model, ListDetailsDeleteModelViewModel>(model));
+            }
+            return View(modelsViewModel);
         }
 
         //// GET: /Model/Details/5
@@ -43,7 +50,7 @@ namespace WebApplication.Controllers
         // GET: /Model/Create
         public ActionResult Create()
         {
-            ModelViewModel mvmCreate = Mapper.Map<Model, ModelViewModel>(new Model());
+            CreateEditModelViewModel mvmCreate = Mapper.Map<Model, CreateEditModelViewModel>(new Model());
 
             return View(mvmCreate);
         }
@@ -54,11 +61,11 @@ namespace WebApplication.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(ModelViewModel mvmCreate)
+        public ActionResult Create(CreateEditModelViewModel mvmCreate)
         {
             if (ModelState.IsValid)
             {
-                Model model = Mapper.Map<ModelViewModel, Model>(mvmCreate);
+                Model model = Mapper.Map<CreateEditModelViewModel, Model>(mvmCreate);
 
                 modelRepo.Add(model);
 
@@ -82,20 +89,20 @@ namespace WebApplication.Controllers
                 return HttpNotFound();
             }
 
-            ModelViewModel mvmEdit = Mapper.Map<Model, ModelViewModel>(model);
+            CreateEditModelViewModel mvmEdit = Mapper.Map<Model, CreateEditModelViewModel>(model);
 
             return View(mvmEdit);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(ModelViewModel mvmEdit)
+        public ActionResult Edit(CreateEditModelViewModel mvmEdit)
         {
             if (ModelState.IsValid)
             {
                 //Mode
 
-                Model model = Mapper.Map<ModelViewModel, Model>(mvmEdit);
+                Model model = Mapper.Map<CreateEditModelViewModel, Model>(mvmEdit);
 
                 modelRepo.Update(model);
                 modelRepo.Save();
@@ -117,7 +124,7 @@ namespace WebApplication.Controllers
             {
                 return HttpNotFound();
             }
-            return View(model);
+            return View(Mapper.Map<Model, ListDetailsDeleteModelViewModel>(model));
         }
 
         // POST: /Model/Delete/5
@@ -142,17 +149,29 @@ namespace WebApplication.Controllers
             {
                 return PartialView("_ObjectNotFound");
             }
-            return PartialView("_ModelDetails", model);
+            return PartialView("_ModelDetails",Mapper.Map<Model, ListDetailsDeleteModelViewModel>(model));
         }
         
         public PartialViewResult SortByName()
         {
-            return PartialView("_ModelList", this.modelRepo.GetAll().OrderBy(x => x.Name));
+            List<Model> models = modelRepo.GetAll().OrderBy(x => x.Name).ToList();
+            List<ListDetailsDeleteModelViewModel> modelsViewModel = new List<ListDetailsDeleteModelViewModel>();
+            foreach (Model model in models)
+            {
+                modelsViewModel.Add(Mapper.Map<Model, ListDetailsDeleteModelViewModel>(model));
+            }
+            return PartialView("_ModelList", modelsViewModel);
         }
 
         public PartialViewResult SortByManufacturer()
         {
-            return PartialView("_ModelList", this.modelRepo.GetAll().OrderBy(x => x.Manufacturer.Name));
+            List<Model> models = modelRepo.GetAll().OrderBy(x => x.Manufacturer.Name).ToList();
+            List<ListDetailsDeleteModelViewModel> modelsViewModel = new List<ListDetailsDeleteModelViewModel>();
+            foreach (Model model in models)
+            {
+                modelsViewModel.Add(Mapper.Map<Model, ListDetailsDeleteModelViewModel>(model));
+            }
+            return PartialView("_ModelList", modelsViewModel);
         }
 
         protected override void Dispose(bool disposing)

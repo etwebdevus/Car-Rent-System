@@ -6,9 +6,9 @@ using ModelLayerClassLibrary.Entities;
 using System.Web.Mvc;
 using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication.ViewModel
+namespace WebApplication.ViewModel.Model
 {
-    public class ModelViewModel
+    public class CreateEditModelViewModel
     {
         public int ModelID { get; set; }
         [Required]

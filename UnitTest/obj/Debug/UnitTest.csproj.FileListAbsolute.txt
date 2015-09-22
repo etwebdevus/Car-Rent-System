@@ -56,11 +56,11 @@ C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\System.Web.Optimiza
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Owin.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.Owin.dll
+C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\AutoMapper.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.Owin.Security.Cookies.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.Owin.Security.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\AutoMapper.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\System.Web.Razor.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\System.Web.WebPages.Razor.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\System.Web.WebPages.dll
@@ -76,11 +76,11 @@ C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.AspNet.Id
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\System.Web.Optimization.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.Owin.xml
+C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\AutoMapper.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.Owin.Security.Cookies.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.Owin.Security.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\AutoMapper.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\System.Web.Razor.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\System.Web.WebPages.xml
