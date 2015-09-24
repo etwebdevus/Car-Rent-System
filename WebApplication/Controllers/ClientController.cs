@@ -10,17 +10,21 @@ using ModelLayerClassLibrary.Entities;
 using ModelLayerClassLibrary.Repositories;
 using WebApplication.ViewModel.Client;
 using AutoMapper;
+using ModelLayerClassLibrary.Abstract;
+using ServiceClassLibrary.UserServices;
+using ServiceClassLibrary.Interfaces;
 
 namespace WebApplication.Controllers
 {
     public class ClientController : Controller
     {
-        private UserRepository userRepo = new UserRepository(new WebAppRentSysDbContext());
+        //private IRepository<User> userRepo = new UserRepository(new WebAppRentSysDbContext());
+        private IService<User> userServices = new UserServices();
 
         // GET: /Client/
         public ActionResult Index()
         {
-            List<Client> clients = userRepo.GetAll().OfType<Client>().OrderBy(x => x.Name).ToList();
+            List<Client> clients = userServices.GetAll().OfType<Client>().OrderBy(x => x.Name).ToList();
             List<ClientViewModel> clientsViewModel = new List<ClientViewModel>();
 
             foreach (Client client in clients)
@@ -38,7 +42,7 @@ namespace WebApplication.Controllers
             {
                 return PartialView("_ObjectNotFound");
             }
-            Client client = (Client) userRepo.GetByID(id.Value);
+            Client client = (Client) userServices.GetByID(id.Value);
             if (client == null)
             {
                 return PartialView("_ObjectNotFound");
@@ -61,8 +65,8 @@ namespace WebApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                userRepo.Add(Mapper.Map<ClientViewModel, Client>(client));
-                userRepo.Save();
+                userServices.Add(Mapper.Map<ClientViewModel, Client>(client));
+                userServices.Save();
                 return RedirectToAction("Index");
             }
 
@@ -76,7 +80,7 @@ namespace WebApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Client client = (Client) userRepo.GetByID(id.Value);
+            Client client = (Client) userServices.GetByID(id.Value);
             if (client == null)
             {
                 return HttpNotFound();
@@ -94,8 +98,8 @@ namespace WebApplication.Controllers
             if (ModelState.IsValid)
             {
                 var teste = (Mapper.Map<ClientViewModel, Client>(client));
-                userRepo.Update((Mapper.Map<ClientViewModel, Client>(client)));
-                userRepo.Save();
+                userServices.Update((Mapper.Map<ClientViewModel, Client>(client)));
+                userServices.Save();
                 return RedirectToAction("Index");
             }
             return View(client);
@@ -108,7 +112,7 @@ namespace WebApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Client client = (Client)userRepo.GetByID(id.Value);
+            Client client = (Client)userServices.GetByID(id.Value);
             if (client == null)
             {
                 return HttpNotFound();
@@ -121,15 +125,15 @@ namespace WebApplication.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Client client = (Client)userRepo.GetByID(id);
-            userRepo.Delete(client.UserID);
-            userRepo.Save();
+            Client client = (Client)userServices.GetByID(id);
+            userServices.Delete(client.UserID);
+            userServices.Save();
             return RedirectToAction("Index");
         }
 
         public PartialViewResult SortByName()
         {
-            List<Client> clients = userRepo.GetAll().OfType<Client>().OrderBy(x => x.Name).ToList();
+            List<Client> clients = userServices.GetAll().OfType<Client>().OrderBy(x => x.Name).ToList();
             List<ClientViewModel> clientsViewModel = new List<ClientViewModel>();
 
             foreach (Client client in clients)
@@ -141,7 +145,7 @@ namespace WebApplication.Controllers
 
         public PartialViewResult SortByID()
         {
-            List<Client> clients = userRepo.GetAll().OfType<Client>().OrderBy(x => x.IDNumber).ToList();
+            List<Client> clients = userServices.GetAll().OfType<Client>().OrderBy(x => x.IDNumber).ToList();
             List<ClientViewModel> clientsViewModel = new List<ClientViewModel>();
 
             foreach (Client client in clients)
@@ -155,7 +159,7 @@ namespace WebApplication.Controllers
         {
             if (disposing)
             {
-                userRepo.Dispose();
+                userServices.Dispose();
             }
             base.Dispose(disposing);
         }

@@ -10,17 +10,19 @@ using ModelLayerClassLibrary.Entities;
 using ModelLayerClassLibrary.Repositories;
 using WebApplication.ViewModel.Manufacturer;
 using AutoMapper;
+using ServiceClassLibrary.Interfaces;
+using ServiceClassLibrary.ManufacturerServices;
 
 namespace WebApplication.Controllers
 {
     public class ManufacturerController : Controller
     {
-        private ManufacturerRepository manuRepo = new ManufacturerRepository(new WebAppRentSysDbContext());
+        private IService<Manufacturer> manuServices = new ManufacturerServices();
 
         // GET: /Manufacturer/
         public ActionResult Index()
         {
-            List<Manufacturer> manufacturers = manuRepo.GetAll().OrderBy(x => x.Name).ToList();
+            List<Manufacturer> manufacturers = manuServices.GetAll().OrderBy(x => x.Name).ToList();
 
             List<ManufacturerViewModel> manuViewModel = new List<ManufacturerViewModel>();
 
@@ -46,8 +48,8 @@ namespace WebApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                manuRepo.Add(Mapper.Map< ManufacturerViewModel, Manufacturer>(manufacturer));
-                manuRepo.Save();
+                manuServices.Add(Mapper.Map< ManufacturerViewModel, Manufacturer>(manufacturer));
+                manuServices.Save();
                 return RedirectToAction("Index");
             }
 
@@ -61,7 +63,7 @@ namespace WebApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ManufacturerViewModel manufacturer = Mapper.Map<Manufacturer, ManufacturerViewModel>(manuRepo.GetByID(id.Value));
+            ManufacturerViewModel manufacturer = Mapper.Map<Manufacturer, ManufacturerViewModel>(manuServices.GetByID(id.Value));
             if (manufacturer == null)
             {
                 return HttpNotFound();
@@ -78,8 +80,8 @@ namespace WebApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                manuRepo.Update(Mapper.Map < ManufacturerViewModel, Manufacturer>(manufacturer));
-                manuRepo.Save();
+                manuServices.Update(Mapper.Map < ManufacturerViewModel, Manufacturer>(manufacturer));
+                manuServices.Save();
                 return RedirectToAction("Index");
             }
             return View(manufacturer);
@@ -92,7 +94,7 @@ namespace WebApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ManufacturerViewModel manufacturer = Mapper.Map<Manufacturer, ManufacturerViewModel>(manuRepo.GetByID(id.Value));
+            ManufacturerViewModel manufacturer = Mapper.Map<Manufacturer, ManufacturerViewModel>(manuServices.GetByID(id.Value));
             if (manufacturer == null)
             {
                 return HttpNotFound();
@@ -105,9 +107,9 @@ namespace WebApplication.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Manufacturer manufacturer = manuRepo.GetByID(id);
-            manuRepo.Delete(manufacturer.ManufacturerID);
-            manuRepo.Save();
+            Manufacturer manufacturer = manuServices.GetByID(id);
+            manuServices.Delete(manufacturer.ManufacturerID);
+            manuServices.Save();
             return RedirectToAction("Index");
         }
 
@@ -115,7 +117,7 @@ namespace WebApplication.Controllers
         {
             if (disposing)
             {
-                manuRepo.Dispose();
+                manuServices.Dispose();
             }
             base.Dispose(disposing);
         }

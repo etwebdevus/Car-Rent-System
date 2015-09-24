@@ -11,19 +11,22 @@ using ModelLayerClassLibrary.Repositories;
 using WebApplication.ViewModel;
 using AutoMapper;
 using WebApplication.ViewModel.Model;
+using ServiceClassLibrary.Interfaces;
+using ServiceClassLibrary.ManufacturerServices;
+using ServiceClassLibrary.ModelServices;
 
 namespace WebApplication.Controllers
 {
     public class ModelController : Controller
     {
-        private ModelRepository modelRepo = new ModelRepository(new WebAppRentSysDbContext());
-        private ManufacturerRepository manuRepo = new ManufacturerRepository(new WebAppRentSysDbContext());
+        private IService<Model> modelServices = new ModelServices();
+        private IService<Manufacturer> manuServices = new ManufacturerServices();
 
 
         // GET: /Model/
         public ActionResult Index()
         {
-            List<Model> models = modelRepo.GetAll().OrderBy(x => x.Name).ToList();
+            List<Model> models = modelServices.GetAll().OrderBy(x => x.Name).ToList();
             List<ListDetailsDeleteModelViewModel> modelsViewModel = new List<ListDetailsDeleteModelViewModel>();
             foreach (Model model in models)
             {
@@ -67,9 +70,9 @@ namespace WebApplication.Controllers
             {
                 Model model = Mapper.Map<CreateEditModelViewModel, Model>(mvmCreate);
 
-                modelRepo.Add(model);
+                modelServices.Add(model);
 
-                modelRepo.Save();
+                modelServices.Save();
                 return RedirectToAction("Index");
             }
 
@@ -83,7 +86,7 @@ namespace WebApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Model model = modelRepo.GetByID(id.Value);
+            Model model = modelServices.GetByID(id.Value);
             if (model == null)
             {
                 return HttpNotFound();
@@ -104,8 +107,8 @@ namespace WebApplication.Controllers
 
                 Model model = Mapper.Map<CreateEditModelViewModel, Model>(mvmEdit);
 
-                modelRepo.Update(model);
-                modelRepo.Save();
+                modelServices.Update(model);
+                modelServices.Save();
                 return RedirectToAction("Index");
             }
 
@@ -119,7 +122,7 @@ namespace WebApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Model model = modelRepo.GetByID(id.Value);
+            Model model = modelServices.GetByID(id.Value);
             if (model == null)
             {
                 return HttpNotFound();
@@ -132,9 +135,9 @@ namespace WebApplication.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Model model = modelRepo.GetByID(id);
-            modelRepo.Delete(model.ModelID);
-            modelRepo.Save();
+            Model model = modelServices.GetByID(id);
+            modelServices.Delete(model.ModelID);
+            modelServices.Save();
             return RedirectToAction("Index");
         }
         
@@ -144,7 +147,7 @@ namespace WebApplication.Controllers
             {
                 return PartialView("_ObjectNotFound");
             }
-            Model model = modelRepo.GetByID(id.Value);
+            Model model = modelServices.GetByID(id.Value);
             if (model == null)
             {
                 return PartialView("_ObjectNotFound");
@@ -154,7 +157,7 @@ namespace WebApplication.Controllers
         
         public PartialViewResult SortByName()
         {
-            List<Model> models = modelRepo.GetAll().OrderBy(x => x.Name).ToList();
+            List<Model> models = modelServices.GetAll().OrderBy(x => x.Name).ToList();
             List<ListDetailsDeleteModelViewModel> modelsViewModel = new List<ListDetailsDeleteModelViewModel>();
             foreach (Model model in models)
             {
@@ -165,7 +168,7 @@ namespace WebApplication.Controllers
 
         public PartialViewResult SortByManufacturer()
         {
-            List<Model> models = modelRepo.GetAll().OrderBy(x => x.Manufacturer.Name).ToList();
+            List<Model> models = modelServices.GetAll().OrderBy(x => x.Manufacturer.Name).ToList();
             List<ListDetailsDeleteModelViewModel> modelsViewModel = new List<ListDetailsDeleteModelViewModel>();
             foreach (Model model in models)
             {
@@ -178,8 +181,8 @@ namespace WebApplication.Controllers
         {
             if (disposing)
             {
-                modelRepo.Dispose();
-                manuRepo.Dispose();
+                modelServices.Dispose();
+                manuServices.Dispose();
             }
             base.Dispose(disposing);
         }

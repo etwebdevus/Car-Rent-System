@@ -10,18 +10,19 @@ using ModelLayerClassLibrary.Entities;
 using ModelLayerClassLibrary.Repositories;
 using WebApplication.ViewModel.Car;
 using AutoMapper;
+using ServiceClassLibrary.Interfaces;
+using ServiceClassLibrary.CarServices;
 
 namespace WebApplication.Controllers
 {
     public class CarController : Controller
     {
-        private WebAppRentSysDbContext db = new WebAppRentSysDbContext();
-        private CarRepository carRepo = new CarRepository(new WebAppRentSysDbContext());
+        private IService<Car> carServices = new CarServices();
 
         // GET: /Car/
         public ActionResult Index()
         {
-            List<Car> cars = carRepo.GetAll().OrderBy(x => x.Model.Name).ToList();
+            List<Car> cars = carServices.GetAll().OrderBy(x => x.Model.Name).ToList();
             List<ListDetailsDeleteCarViewModel> carsViewModel = new List<ListDetailsDeleteCarViewModel>();
 
             foreach (Car car in cars)
@@ -34,7 +35,7 @@ namespace WebApplication.Controllers
 
         public PartialViewResult SortByName()
         {
-            List<Car> cars = carRepo.GetAll().OrderBy(x => x.Model.Name).ToList();
+            List<Car> cars = carServices.GetAll().OrderBy(x => x.Model.Name).ToList();
             List<ListDetailsDeleteCarViewModel> carsViewModel = new List<ListDetailsDeleteCarViewModel>();
 
             foreach (Car car in cars)
@@ -47,7 +48,7 @@ namespace WebApplication.Controllers
 
         public PartialViewResult SortByLicensePlate()
         {
-            List<Car> cars = carRepo.GetAll().OrderBy(x => x.LicensePlate).ToList();
+            List<Car> cars = carServices.GetAll().OrderBy(x => x.LicensePlate).ToList();
             List<ListDetailsDeleteCarViewModel> carsViewModel = new List<ListDetailsDeleteCarViewModel>();
 
             foreach (Car car in cars)
@@ -60,7 +61,7 @@ namespace WebApplication.Controllers
 
         public PartialViewResult SortByEngine()
         {
-            List<Car> cars = carRepo.GetAll().OrderBy(x => x.Model.Engine).ToList();
+            List<Car> cars = carServices.GetAll().OrderBy(x => x.Model.Engine).ToList();
             List<ListDetailsDeleteCarViewModel> carsViewModel = new List<ListDetailsDeleteCarViewModel>();
 
             foreach (Car car in cars)
@@ -78,7 +79,7 @@ namespace WebApplication.Controllers
             {
                 return PartialView("Error");
             }
-            Car car = db.Cars.Find(id);
+            Car car = carServices.GetByID(id.Value);
             if (car == null)
             {
                 return PartialView("Error");
@@ -101,8 +102,8 @@ namespace WebApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Cars.Add(Mapper.Map<CreateEditCarViewModel, Car>(car));
-                db.SaveChanges();
+                carServices.Add(Mapper.Map<CreateEditCarViewModel, Car>(car));
+                carServices.Save();
                 return RedirectToAction("Index");
             }
 
@@ -116,7 +117,7 @@ namespace WebApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Car car = db.Cars.Find(id);
+            Car car = carServices.GetByID(id.Value);
             if (car == null)
             {
                 return HttpNotFound();
@@ -136,8 +137,8 @@ namespace WebApplication.Controllers
 
             if (ModelState.IsValid)
             {
-                db.Entry(car).State = EntityState.Modified;
-                db.SaveChanges();
+                carServices.Update(car);
+                carServices.Save();
                 return RedirectToAction("Index");
             }
 
@@ -151,7 +152,7 @@ namespace WebApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Car car = db.Cars.Find(id);
+            Car car = carServices.GetByID(id.Value);
             if (car == null)
             {
                 return HttpNotFound();
@@ -164,9 +165,9 @@ namespace WebApplication.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Car car = db.Cars.Find(id);
-            db.Cars.Remove(car);
-            db.SaveChanges();
+            Car car = carServices.GetByID(id);
+            carServices.Delete(car.CarID);
+            carServices.Save();
             return RedirectToAction("Index");
         }
 
@@ -174,7 +175,7 @@ namespace WebApplication.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                carServices.Dispose();
             }
             base.Dispose(disposing);
         }

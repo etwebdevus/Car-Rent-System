@@ -273,6 +273,10 @@
       <Project>{b8183c60-f294-45de-8a80-c71f0823e655}</Project>
       <Name>ModelLayerClassLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ServiceClassLibrary\ServiceClassLibrary.csproj">
+      <Project>{4b681f6b-945f-4cdb-a284-8834a1664838}</Project>
+      <Name>ServiceClassLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
