@@ -10,3 +10,5 @@ C:\Users\Hartur\Documents\GitHub\RentACar\ServiceClassLibrary\bin\Debug\EntityFr
 C:\Users\Hartur\Documents\GitHub\RentACar\ServiceClassLibrary\obj\Debug\ServiceClassLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Hartur\Documents\GitHub\RentACar\ServiceClassLibrary\obj\Debug\ServiceClassLibrary.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\ServiceClassLibrary\obj\Debug\ServiceClassLibrary.pdb
+C:\Users\Hartur\Documents\GitHub\RentACar\ServiceClassLibrary\bin\Debug\ServiceClassLibrary.dll.CodeAnalysisLog.xml
+C:\Users\Hartur\Documents\GitHub\RentACar\ServiceClassLibrary\bin\Debug\ServiceClassLibrary.dll.lastcodeanalysissucceeded

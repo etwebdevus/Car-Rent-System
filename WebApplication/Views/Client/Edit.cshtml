@@ -50,7 +50,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.PhoneNumberDDD, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.PhoneNumberPhone, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.PhoneNumberDDD)
                 @Html.ValidationMessageFor(model => model.PhoneNumberDDD)
@@ -93,8 +93,8 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.AddressState, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.AddressState)
+            <div class="col-md-1">
+                @Html.EnumDropDownListFor(m => m.AddressState, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.AddressState)
             </div>
         </div>

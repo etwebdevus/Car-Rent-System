@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using UtilsValidation.UserValidation;
 
 namespace WebApplication.ViewModel.Client
 {
@@ -16,87 +17,74 @@ namespace WebApplication.ViewModel.Client
         public bool IsIndividual { get; set; }
         
         [Required]
-        //[MinLength(3)]
-        //[MaxLength(26)]
+        [StringLength(20)]
         public string Name { get; set; }
         
         [Required]
+        [CPF]
         [Display(Name = "ID Number")]
-        //[StringLength(11)]
         public string IDNumber { get; set; }
 
         [Required]
-        [Display(Name = "E-mail")]
         //[DataType(DataType.EmailAddress)]
-        //[MinLength(5)]
-        //[MaxLength(26)]
+        [Email]
+        [Display(Name = "E-mail")]
         public string Email { get; set; }
 
-
         [Required]
-        [Display(Name = "Phone Number")]
-        //[StringLength(3)]
+        [Display(Name = "DDD")]
         public string PhoneNumberDDD { get; set; }
         
         [Required]
-        //[MinLength(8)]
-        //[MaxLength(9)]
+        [PhoneNumber]
+        //[MinLength(8, ErrorMessage="Phone number should have at least 8 numbers")]
+        //[MaxLength(9, ErrorMessage = "Phone number should have a maximum of 9 numbers")]
+        [Display(Name = "Phone Number")]
         public string PhoneNumberPhone { get; set; }
 
-        
         [Required]
         [Display(Name = "State")]
         public EnumState AddressState { get; set; }
         
         [Required]
         [Display(Name = "City")]
-        //[MinLength(2)]
-        //[MaxLength(26)]
+        [StringLength(20)]
         public string AddressCity { get; set; }
         
         [Required]
         [Display(Name = "Street")]
-        //[MinLength(2)]
-        //[MaxLength(26)]
         public string AddressStreet { get; set; }
         
         [Required]
         [Display(Name = "District")]
-        //[MinLength(3)]
-        //[MaxLength(26)]
         public string AddressDistrict { get; set; }
         
         [Required]
         [Display(Name = "Address Number")]
-        //[MinLength(1)]
-        //[MaxLength(5)]
+        [Range(1,5000)]
         public int AddressNumber { get; set; }
 
         [Required]
         [Display(Name = "Credit Card's owner name")]
-        //[DataType(DataType.Text)]
-        //[MinLength(2)]
-        //[MaxLength(26)]
+        [StringLength(20)]
         public string CreditCardName { get; set; }
 
         [Required]
         [Display(Name = "Credit Card Number")]
-        //[StringLength(16)]
         public string CreditCardNumber { get; set; }
 
         [Required]
         [Display(Name = "Credit Card Security Number")]
-        //[StringLength(3)]
         public string CreditCardSecurityNumber { get; set; }
         
         [Required]
         [Display(Name = "Credit Card Expiration Month")]
-        //[StringLength(2)]
+        [Range(1,12)]
         public int CreditCardMonth { get; set; }
 
         [Required]
         [Display(Name = "Credit Card Expiration Year")]
-        //[StringLength(4)]
+        [Range(2015, 2030)]
         public int CreditCardYear { get; set; }
     }
 }
