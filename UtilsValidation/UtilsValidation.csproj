@@ -41,17 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserValidation\CreditCardSecurityNumAttribute.cs" />
+    <Compile Include="UserValidation\CreditCardNumberAttribute.cs" />
+    <Compile Include="UserValidation\OnlyCharAttribute.cs" />
     <Compile Include="UserValidation\ClientValidation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserValidation\DDDAttribute.cs" />
     <Compile Include="UserValidation\PhoneAttribute.cs" />
     <Compile Include="UserValidation\EmailAttribute.cs" />
     <Compile Include="UserValidation\CPFAttribute.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ModelLayerClassLibrary\ModelLayerClassLibrary.csproj">
-      <Project>{b8183c60-f294-45de-8a80-c71f0823e655}</Project>
-      <Name>ModelLayerClassLibrary</Name>
-    </ProjectReference>
+    <Compile Include="Utils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

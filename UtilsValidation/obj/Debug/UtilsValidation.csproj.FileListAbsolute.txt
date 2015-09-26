@@ -1,11 +1,5 @@
 C:\Users\Hartur\Documents\GitHub\RentACar\UtilsValidation\bin\Debug\UtilsValidation.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UtilsValidation\bin\Debug\UtilsValidation.pdb
-C:\Users\Hartur\Documents\GitHub\RentACar\UtilsValidation\bin\Debug\ModelLayerClassLibrary.dll
-C:\Users\Hartur\Documents\GitHub\RentACar\UtilsValidation\bin\Debug\EntityFramework.dll
-C:\Users\Hartur\Documents\GitHub\RentACar\UtilsValidation\bin\Debug\ModelLayerClassLibrary.pdb
-C:\Users\Hartur\Documents\GitHub\RentACar\UtilsValidation\bin\Debug\EntityFramework.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UtilsValidation\obj\Debug\UtilsValidation.csprojResolveAssemblyReference.cache
 C:\Users\Hartur\Documents\GitHub\RentACar\UtilsValidation\obj\Debug\UtilsValidation.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UtilsValidation\obj\Debug\UtilsValidation.pdb
-C:\Users\Hartur\Documents\GitHub\RentACar\UtilsValidation\bin\Debug\UtilsValidation.dll.CodeAnalysisLog.xml
-C:\Users\Hartur\Documents\GitHub\RentACar\UtilsValidation\bin\Debug\UtilsValidation.dll.lastcodeanalysissucceeded

@@ -97,7 +97,6 @@ namespace WebApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                var teste = (Mapper.Map<ClientViewModel, Client>(client));
                 userServices.Update((Mapper.Map<ClientViewModel, Client>(client)));
                 userServices.Save();
                 return RedirectToAction("Index");

@@ -55,7 +55,6 @@ C:\Users\Hartur\Documents\rentacarofficewebapp\WebApplication\bin\Microsoft.Owin
 C:\Users\Hartur\Documents\rentacarofficewebapp\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
 C:\Users\Hartur\Documents\rentacarofficewebapp\WebApplication\obj\Debug\WebApplication.dll
 C:\Users\Hartur\Documents\rentacarofficewebapp\WebApplication\obj\Debug\WebApplication.pdb
-C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\WebApplication.dll.config
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\WebApplication.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\WebApplication.pdb
@@ -116,7 +115,6 @@ C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Microsoft.Owin.Secu
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\obj\Debug\WebApplication.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\obj\Debug\WebApplication.pdb
-C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\WebApplication.dll.CodeAnalysisLog.xml
-C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\WebApplication.dll.lastcodeanalysissucceeded

@@ -26,19 +26,17 @@ namespace WebApplication.ViewModel.Client
         public string IDNumber { get; set; }
 
         [Required]
-        //[DataType(DataType.EmailAddress)]
         [Email]
         [Display(Name = "E-mail")]
         public string Email { get; set; }
 
         [Required]
+        [DDD]
         [Display(Name = "DDD")]
         public string PhoneNumberDDD { get; set; }
         
         [Required]
         [PhoneNumber]
-        //[MinLength(8, ErrorMessage="Phone number should have at least 8 numbers")]
-        //[MaxLength(9, ErrorMessage = "Phone number should have a maximum of 9 numbers")]
         [Display(Name = "Phone Number")]
         public string PhoneNumberPhone { get; set; }
 
@@ -47,15 +45,17 @@ namespace WebApplication.ViewModel.Client
         public EnumState AddressState { get; set; }
         
         [Required]
+        [OnlyChar]
         [Display(Name = "City")]
-        [StringLength(20)]
         public string AddressCity { get; set; }
         
         [Required]
+        [StringLength(20)]
         [Display(Name = "Street")]
         public string AddressStreet { get; set; }
         
         [Required]
+        [OnlyChar]
         [Display(Name = "District")]
         public string AddressDistrict { get; set; }
         
@@ -70,10 +70,12 @@ namespace WebApplication.ViewModel.Client
         public string CreditCardName { get; set; }
 
         [Required]
+        [CreditCardNumber]
         [Display(Name = "Credit Card Number")]
         public string CreditCardNumber { get; set; }
 
         [Required]
+        [CreditCardSecurityNum]
         [Display(Name = "Credit Card Security Number")]
         public string CreditCardSecurityNumber { get; set; }
         

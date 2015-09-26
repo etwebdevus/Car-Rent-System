@@ -12,10 +12,10 @@ C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\bin\Debug\Model
 C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\bin\Debug\ModelLayerClassLibrary.pdb
 C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\bin\Debug\EntityFramework.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\bin\Debug\UtilsValidation.dll
+C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\bin\Debug\UtilsValidation.pdb
 C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\bin\Debug\EntityFramework.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\obj\Debug\ModelLayerClassLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\obj\Debug\ModelLayerClassLibrary.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\obj\Debug\ModelLayerClassLibrary.pdb
-C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\bin\Debug\ModelLayerClassLibrary.dll.CodeAnalysisLog.xml
-C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\bin\Debug\ModelLayerClassLibrary.dll.lastcodeanalysissucceeded
-C:\Users\Hartur\Documents\GitHub\RentACar\ModelLayerClassLibrary\obj\Debug\ModelLayerClassLibrary.csprojResolveAssemblyReference.cache

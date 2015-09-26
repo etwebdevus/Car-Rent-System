@@ -46,13 +46,14 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.PhoneNumberPhone, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-4">
                 @Html.EditorFor(model => model.PhoneNumberDDD)
                 @Html.ValidationMessageFor(model => model.PhoneNumberDDD)
                 @Html.EditorFor(model => model.PhoneNumberPhone)
                 @Html.ValidationMessageFor(model => model.PhoneNumberPhone)
             </div>
         </div>
+        
 
         <div class="form-group">
             @Html.LabelFor(model => model.AddressStreet, new { @class = "control-label col-md-2" })

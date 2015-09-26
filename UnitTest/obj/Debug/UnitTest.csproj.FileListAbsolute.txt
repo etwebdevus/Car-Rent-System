@@ -43,16 +43,14 @@ C:\Users\Hartur\Documents\rentacarofficewebapp\UnitTest\bin\Debug\Newtonsoft.Jso
 C:\Users\Hartur\Documents\rentacarofficewebapp\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
 C:\Users\Hartur\Documents\rentacarofficewebapp\UnitTest\obj\Debug\UnitTest.dll
 C:\Users\Hartur\Documents\rentacarofficewebapp\UnitTest\obj\Debug\UnitTest.pdb
-C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\UnitTest.dll.config
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\UnitTest.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\UnitTest.pdb
-C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\UnitTest.dll.CodeAnalysisLog.xml
-C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\UnitTest.dll.lastcodeanalysissucceeded
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\EntityFramework.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\ModelLayerClassLibrary.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\WebApplication.dll
+C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\UtilsValidation.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\System.Web.Mvc.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\System.Web.Optimization.dll
@@ -65,7 +63,6 @@ C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.Owin.Secu
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.Owin.Security.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\UtilsValidation.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\System.Web.Razor.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\System.Web.WebPages.Razor.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\System.Web.WebPages.dll
@@ -76,6 +73,7 @@ C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\ModelLayerClassLibr
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\WebApplication.pdb
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\EntityFramework.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\UtilsValidation.pdb
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\System.Web.Mvc.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\System.Web.Optimization.xml
@@ -87,12 +85,12 @@ C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.Owin.Secu
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.Owin.Security.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\UtilsValidation.pdb
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\System.Web.Razor.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\System.Web.WebPages.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\obj\Debug\UnitTest.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\obj\Debug\UnitTest.pdb

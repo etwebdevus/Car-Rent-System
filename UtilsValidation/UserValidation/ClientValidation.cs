@@ -1,7 +1,4 @@
-﻿using ModelLayerClassLibrary.Abstract;
-using ModelLayerClassLibrary.Entities;
-using ModelLayerClassLibrary.Utils;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,17 +9,17 @@ namespace UtilsValidation.UserValidation
 {
     public static class ClientValidation
     {
-        private static bool IsValid(User user)
-        {
-            if (user.IsIndividual)
-            {
-                return (ClientValidation.ValidateName(user.Name) && ClientValidation.ValidateEmail(user.Email) && ClientValidation.ValidateCpf(user.IDNumber) && ClientValidation.ValidatePhoneNumber(user.PhoneNumber.Phone) && ClientValidation.ValidateAddress(user.Address) && ClientValidation.ValidateCreditCard(((Client)user).CreditCard));
-            }
-            else
-            {
-                return (ClientValidation.ValidateName(user.Name) && ClientValidation.ValidateEmail(user.Email) && ClientValidation.ValidateCnpj(user.IDNumber) && ClientValidation.ValidatePhoneNumber(user.PhoneNumber.Phone) && ClientValidation.ValidateAddress(user.Address) && ClientValidation.ValidateCreditCard(((Client)user).CreditCard));
-            }
-        }
+        //private static bool IsValid(User user)
+        //{
+        //    if (user.IsIndividual)
+        //    {
+        //        return (ClientValidation.ValidateName(user.Name) && ClientValidation.ValidateEmail(user.Email) && ClientValidation.ValidateCpf(user.IDNumber) && ClientValidation.ValidatePhoneNumber(user.PhoneNumber.Phone) && ClientValidation.ValidateAddress(user.Address.ToString) && ClientValidation.ValidateCreditCard(((Client)user).CreditCard));
+        //    }
+        //    else
+        //    {
+        //        return (ClientValidation.ValidateName(user.Name) && ClientValidation.ValidateEmail(user.Email) && ClientValidation.ValidateCnpj(user.IDNumber) && ClientValidation.ValidatePhoneNumber(user.PhoneNumber.Phone) && ClientValidation.ValidateAddress(user.Address) && ClientValidation.ValidateCreditCard(((Client)user).CreditCard));
+        //    }
+        //}
 
         private static bool ValidateName(string name)
         {
@@ -36,7 +33,7 @@ namespace UtilsValidation.UserValidation
             }
         }
 
-        internal static bool ValidateCpf(string cpf)
+        public static bool ValidateCpf(string cpf)
         {
             int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
             int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
@@ -91,18 +88,18 @@ namespace UtilsValidation.UserValidation
             return cpf.EndsWith(digit);
         }
 
-        internal static bool ValidateCnpj(string cnpj)
+        public static bool ValidateCnpj(string cnpj)
         {
             return true;
         }
 
-        internal static bool ValidateEmail(string email)
+        public static bool ValidateEmail(string email)
         {
             var regexEmail = new Regex(@"^(?("")("".+?""@)|(([0-9a-zA-Z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-zA-Z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,6}))$");
             return regexEmail.IsMatch(email);
         }
 
-        internal static bool ValidatePhoneNumber(string phone)
+        public static bool ValidatePhoneNumber(string phone)
         {
             if (phone.Length < 8 || phone.Length > 9)
             {
@@ -119,14 +116,55 @@ namespace UtilsValidation.UserValidation
             return true;
         }
 
-        internal static bool ValidateAddress(Address address)
+        public static bool ValidatePhoneDDD(string ddd)
         {
+            if (ddd.Length < 2 || ddd.Length > 3)
+            {
+                return false;
+            }
+
+            foreach (char ch in ddd)
+            {
+                if (ch < '0' || ch > '9')
+                {
+                    return false;
+                }
+            }
             return true;
         }
 
-        internal static bool ValidateCreditCard(CreditCard card)
+        public static bool ValidateOnlyChar(string str)
         {
+            foreach (char ch in str)
+            {
+                if (ch > '0' && ch < '9')
+                {
+                    return false;
+                }
+            }
             return true;
         }
+
+        public static bool ValidateCreditCardNumber(string number)
+        {
+            if (number.Length != 16)
+            {
+                return false;
+            }
+
+            return Utils.OnlyNumber(number);
+        }
+
+        public static bool ValidateCreditCardSecurityNum(string secNum)
+        {
+            if (secNum.Length != 3)
+            {
+                return false;
+            }
+
+            return Utils.OnlyNumber(secNum);
+        }
+
+        
     }
 }
