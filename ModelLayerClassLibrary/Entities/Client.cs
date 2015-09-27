@@ -18,14 +18,7 @@ namespace ModelLayerClassLibrary.Entities
         {
             get
             {
-                if (ClientValidation.ValidateCreditCardNumber(creditcard.Number) && ClientValidation.ValidateCreditCardSecurityNum(creditcard.SecurityNumber))
-                {
-                    return creditcard;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException("Invalid Credit Card value found.");
-                }
+                return creditcard;
             }
             set
             {

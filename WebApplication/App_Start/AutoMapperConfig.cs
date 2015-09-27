@@ -74,7 +74,7 @@ namespace WebApplication.App_Start
                     Month = src.CreditCardMonth,
                     Year = src.CreditCardYear,
                     Number = src.CreditCardNumber,
-                    SecurityNumber = src.CreditCardNumber
+                    SecurityNumber = src.CreditCardSecurityNumber
                 }))
                 .ForMember(dest => dest.PhoneNumber, opt => opt.MapFrom(src => new PhoneNumber()
                 {

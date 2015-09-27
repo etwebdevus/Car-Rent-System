@@ -17,12 +17,12 @@ namespace WebApplication.ViewModel.Client
         public bool IsIndividual { get; set; }
         
         [Required]
-        [StringLength(20)]
+        [Name]
         public string Name { get; set; }
         
         [Required]
-        [CPF]
-        [Display(Name = "ID Number")]
+        [IdNumber]
+        [Display(Name = "CPF/CNPJ")]
         public string IDNumber { get; set; }
 
         [Required]
@@ -45,28 +45,28 @@ namespace WebApplication.ViewModel.Client
         public EnumState AddressState { get; set; }
         
         [Required]
-        [OnlyChar]
+        [City]
         [Display(Name = "City")]
         public string AddressCity { get; set; }
         
         [Required]
-        [StringLength(20)]
+        [Street]
         [Display(Name = "Street")]
         public string AddressStreet { get; set; }
         
         [Required]
-        [OnlyChar]
+        [District]
         [Display(Name = "District")]
         public string AddressDistrict { get; set; }
         
         [Required]
         [Display(Name = "Address Number")]
-        [Range(1,5000)]
+        [Range(1,5000,ErrorMessage="Invalid Address Number")]
         public int AddressNumber { get; set; }
 
         [Required]
+        [CreditCardName]
         [Display(Name = "Credit Card's owner name")]
-        [StringLength(20)]
         public string CreditCardName { get; set; }
 
         [Required]

@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 namespace UtilsValidation.UserValidation
 {
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
-    sealed public class OnlyCharAttribute : ValidationAttribute
+    sealed public class CreditCardNameAttribute : ValidationAttribute
     {
         public override bool IsValid(object value)
         {
-            return ClientValidation.ValidateOnlyChar(value.ToString());
+            return ClientValidation.ValidateCreditCardName(value.ToString());
         }
 
         public override string FormatErrorMessage(string name)

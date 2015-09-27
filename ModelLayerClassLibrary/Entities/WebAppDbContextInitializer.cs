@@ -220,8 +220,8 @@ namespace ModelLayerClassLibrary.Entities
                 Email = "hbb@ecomp.poli.br",
                 PhoneNumber = new PhoneNumber { DDD = "81", Phone = "92471119" },
                 CreditCard = new CreditCard{Month = 12, Year = 2016, Name = "HARTUR", Number = "4564564564564564", SecurityNumber = "555"},
-                IDNumber = "21919065679",
-                IsIndividual = true
+                IsIndividual = true,
+                IDNumber = "21919065679"
             });
 
             rentSys.Users.Add(new Client
@@ -231,8 +231,8 @@ namespace ModelLayerClassLibrary.Entities
                 Email = "ebb2@cin.ufpe.br",
                 PhoneNumber = new PhoneNumber { DDD = "81", Phone = "82432149" },
                 CreditCard = new CreditCard { Month = 12, Year = 2016, Name = "EDUARDO", Number = "4564564564564564", SecurityNumber = "555" },
+                IsIndividual = true,
                 IDNumber = "73521635570",
-                IsIndividual = true
             });
 
             rentSys.Users.Add(new Client
@@ -242,8 +242,8 @@ namespace ModelLayerClassLibrary.Entities
                 Email = "hpcs@ecomp.poli.br",
                 PhoneNumber = new PhoneNumber { DDD = "81", Phone = "96461312" },
                 CreditCard = new CreditCard { Month = 12, Year = 2016, Name = "HENRIQUE", Number = "4564564564564564", SecurityNumber = "555" },
-                IDNumber = "43148833678",
-                IsIndividual = true
+                IsIndividual = true,
+                IDNumber = "43148833678"
             });
 
             rentSys.SaveChanges();

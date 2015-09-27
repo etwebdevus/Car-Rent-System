@@ -20,18 +20,12 @@ namespace ModelLayerClassLibrary.Abstract
         {
             get
             {
-                if (ClientValidation.ValidateOnlyChar(name))
-                {
-                    return name;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException("Invalid name value found.");
-                }
+               return name;
             }
             set
             {
-                if (ClientValidation.ValidateOnlyChar(value))
+                value = value.ToUpper();
+                if (ClientValidation.ValidateName(value))
                 {
                     name = value;
                 }
@@ -45,35 +39,14 @@ namespace ModelLayerClassLibrary.Abstract
 
         private string idnumber;
         public string IDNumber
-        { 
+        {
             get
             {
-                if (IsIndividual)
-                {
-                    if (ClientValidation.ValidateCpf(idnumber))
-                    {
-                        return idnumber;
-                    }
-                    else
-                    {
-                        throw new ArgumentOutOfRangeException("Invalid CPF value found.");
-                    }
-                }
-                else
-                {
-                    if (ClientValidation.ValidateCnpj(idnumber))
-                    {
-                        return idnumber;
-                    }
-                    else
-                    {
-                        throw new ArgumentOutOfRangeException("Invalid CNPJ value found.");
-                    }
-                }
-                
+                return idnumber;
             }
             set 
             {
+                value = value.Replace(".", "").Replace("-", "");
                 if (IsIndividual)
                 {
                     if (ClientValidation.ValidateCpf(value))
@@ -101,18 +74,10 @@ namespace ModelLayerClassLibrary.Abstract
 
         private string email;
         public string Email 
-        { 
+        {
             get
             {
-                if (ClientValidation.ValidateEmail(email))
-                {
-                    return email;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException("Invalid Email value found.");
-                }
-                
+                return email;                
             }
             set 
             {
@@ -132,17 +97,13 @@ namespace ModelLayerClassLibrary.Abstract
         {
             get
             {
-                if (ClientValidation.ValidatePhoneNumber(phonenumber.Phone) && ClientValidation.ValidatePhoneDDD(phonenumber.DDD))
-                {
-                    return phonenumber;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException("Invalid Phone value found.");
-                }
+                return phonenumber;
             }
             set
             {
+                value.Phone = value.Phone.Replace("-", "").Replace(" ", "");
+                value.DDD = value.DDD.Replace("(", "").Replace(")", "");
+
                 if (ClientValidation.ValidatePhoneNumber(value.Phone) && ClientValidation.ValidatePhoneDDD(value.DDD))
                 {
                     phonenumber = value;
@@ -160,18 +121,15 @@ namespace ModelLayerClassLibrary.Abstract
         {
             get
             {
-                if (ClientValidation.ValidateOnlyChar(address.City) && (address.Street.Length<50) && ClientValidation.ValidateOnlyChar(address.District))
-                {
-                    return address;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException("Invalid Address value found.");
-                }
+                return address;
             }
             set
             {
-                if (ClientValidation.ValidateOnlyChar(value.City) && (value.Street.Length < 50) && ClientValidation.ValidateOnlyChar(value.District))
+                value.City = value.City.ToUpper();
+                value.Street = value.Street.ToUpper();
+                value.District = value.District.ToUpper();
+
+                if (ClientValidation.ValidateCity(value.City) && ClientValidation.ValidateStreet(value.Street) && ClientValidation.ValidateDistrict(value.District))
                 {
                     address = value;
                 }

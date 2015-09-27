@@ -41,15 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserValidation\CreditCardNameAttribute.cs" />
+    <Compile Include="UserValidation\DistrictAttribute.cs" />
+    <Compile Include="UserValidation\StreetAttribute.cs" />
     <Compile Include="UserValidation\CreditCardSecurityNumAttribute.cs" />
     <Compile Include="UserValidation\CreditCardNumberAttribute.cs" />
-    <Compile Include="UserValidation\OnlyCharAttribute.cs" />
+    <Compile Include="UserValidation\NameAttribute.cs" />
+    <Compile Include="UserValidation\CityAttribute.cs" />
     <Compile Include="UserValidation\ClientValidation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserValidation\DDDAttribute.cs" />
     <Compile Include="UserValidation\PhoneAttribute.cs" />
     <Compile Include="UserValidation\EmailAttribute.cs" />
-    <Compile Include="UserValidation\CPFAttribute.cs" />
+    <Compile Include="UserValidation\IdNumberAttribute.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

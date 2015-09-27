@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
-using System.Globalization;
 
 namespace UtilsValidation.UserValidation
 {
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
-    sealed public class EmailAttribute : ValidationAttribute
+    sealed public class DistrictAttribute : ValidationAttribute
     {
-
         public override bool IsValid(object value)
         {
-            return ClientValidation.ValidateEmail(value.ToString());
+            return ClientValidation.ValidateDistrict(value.ToString());
         }
 
         public override string FormatErrorMessage(string name)

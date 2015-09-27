@@ -9,12 +9,11 @@ using System.Globalization;
 namespace UtilsValidation.UserValidation
 {
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
-    sealed public class EmailAttribute : ValidationAttribute
+    sealed public class IdNumberAttribute : ValidationAttribute
     {
-
         public override bool IsValid(object value)
         {
-            return ClientValidation.ValidateEmail(value.ToString());
+            return (ClientValidation.ValidateCpf(value.ToString()) || ClientValidation.ValidateCnpj(value.ToString()));
         }
 
         public override string FormatErrorMessage(string name)

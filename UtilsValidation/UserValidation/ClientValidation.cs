@@ -21,9 +21,9 @@ namespace UtilsValidation.UserValidation
         //    }
         //}
 
-        private static bool ValidateName(string name)
+        public static bool ValidateName(string name)
         {
-            if (name != "" || name != null)
+            if (name != "" && name != null && name.Length < 50)
             {
                 return true;
             }
@@ -90,7 +90,15 @@ namespace UtilsValidation.UserValidation
 
         public static bool ValidateCnpj(string cnpj)
         {
-            return true;
+            cnpj = cnpj.Replace(".", "").Replace("-", "").Replace("/", "");
+            if (cnpj != "" && cnpj != null && cnpj.Length == 14)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public static bool ValidateEmail(string email)
@@ -101,50 +109,75 @@ namespace UtilsValidation.UserValidation
 
         public static bool ValidatePhoneNumber(string phone)
         {
+            phone = phone.Replace(" ", "").Replace("-", "");
+
             if (phone.Length < 8 || phone.Length > 9)
             {
                 return false;
             }
 
-            foreach (char ch in phone)
-            {
-                if (ch < '0' || ch > '9')
-                {
-                    return false;
-                }
-            }
-            return true;
+            return Utils.OnlyNumber(phone);
         }
 
         public static bool ValidatePhoneDDD(string ddd)
         {
+            ddd = ddd.Replace("(", "").Replace(")", "");
+
             if (ddd.Length < 2 || ddd.Length > 3)
             {
                 return false;
             }
 
-            foreach (char ch in ddd)
-            {
-                if (ch < '0' || ch > '9')
-                {
-                    return false;
-                }
-            }
-            return true;
+            return Utils.OnlyNumber(ddd);
         }
 
-        public static bool ValidateOnlyChar(string str)
+        public static bool ValidateCity(string city)
         {
-            foreach (char ch in str)
+            if (city.Length > 50)
             {
-                if (ch > '0' && ch < '9')
-                {
-                    return false;
-                }
+                return false;
             }
-            return true;
+
+            return Utils.OnlyChar(city);
         }
 
+        public static bool ValidateStreet(string street)
+        {
+            if (street.Length > 50)
+            {
+                return false;
+            }
+
+            return Utils.OnlyCharAndNumber(street);
+        }
+
+        public static bool ValidateDistrict(string district)
+        {
+            if (district.Length > 50)
+            {
+                return false;
+            }
+
+            return Utils.OnlyCharAndNumber(district);
+        }
+
+        //public static bool ValidateOnlyChar(string str)
+        //{
+        //    foreach (char ch in str)
+        //    {
+        //        if (ch > '0' && ch < '9')
+        //        {
+        //            return false;
+        //        }
+        //    }
+        //    return true;
+        //}
+
+        public static bool ValidateCreditCardName(string name)
+        {
+            return ClientValidation.ValidateName(name);
+        }
+        
         public static bool ValidateCreditCardNumber(string number)
         {
             if (number.Length != 16)
