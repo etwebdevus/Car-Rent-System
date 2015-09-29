@@ -55,6 +55,7 @@ C:\Users\Hartur\Documents\rentacarofficewebapp\WebApplication\bin\Microsoft.Owin
 C:\Users\Hartur\Documents\rentacarofficewebapp\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
 C:\Users\Hartur\Documents\rentacarofficewebapp\WebApplication\obj\Debug\WebApplication.dll
 C:\Users\Hartur\Documents\rentacarofficewebapp\WebApplication\obj\Debug\WebApplication.pdb
+C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\WebApplication.dll.config
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\WebApplication.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\WebApplication.pdb
@@ -62,6 +63,7 @@ C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Antlr3.Runtime.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\AutoMapper.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\EntityFramework.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\EntityFramework.SqlServer.dll
+C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\log4net.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Microsoft.AspNet.Identity.Core.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Microsoft.AspNet.Identity.Owin.dll
@@ -76,6 +78,7 @@ C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Microsoft.Owin.Secu
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Microsoft.Owin.Security.Twitter.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\ModelLayerClassLibrary.dll
+C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Moq.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Newtonsoft.Json.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Owin.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\ServiceClassLibrary.dll
@@ -94,6 +97,8 @@ C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\UtilsValidation.pdb
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\AutoMapper.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\EntityFramework.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\EntityFramework.SqlServer.xml
+C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\log4net.xml
+C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Moq.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\System.Web.Helpers.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\System.Web.Mvc.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\System.Web.Razor.xml
@@ -115,6 +120,5 @@ C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Microsoft.Owin.Secu
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\obj\Debug\WebApplication.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\WebApplication\obj\Debug\WebApplication.pdb

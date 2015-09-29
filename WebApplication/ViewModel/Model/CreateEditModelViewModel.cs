@@ -5,14 +5,16 @@ using System.Web;
 using ModelLayerClassLibrary.Entities;
 using System.Web.Mvc;
 using System.ComponentModel.DataAnnotations;
+using UtilsValidation.Model;
 
 namespace WebApplication.ViewModel.Model
 {
     public class CreateEditModelViewModel
     {
         public int ModelID { get; set; }
+
         [Required]
-        [MaxLength(20)]
+        [Name]
         [Display(Name = "Model")]
         public string Name { get; set; }
         [Required]

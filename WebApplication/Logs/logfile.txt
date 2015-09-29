@@ -1,0 +1,134 @@
+2015-09-29 16:36:53,748 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Home, action Index
+2015-09-29 16:36:53,768 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Home, action Index - time spent 20
+2015-09-29 16:36:58,527 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action Index
+2015-09-29 16:37:04,985 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action Index - time spent 6458
+2015-09-29 16:37:38,661 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action Return
+2015-09-29 16:37:38,836 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action Return - time spent 175
+2015-09-29 16:37:43,211 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action Index
+2015-09-29 16:37:43,218 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action Index - time spent 7
+2015-09-29 16:38:16,038 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action Return
+2015-09-29 16:38:16,047 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action Return - time spent 9
+2015-09-29 16:38:20,493 [13] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action Index
+2015-09-29 16:38:20,503 [13] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action Index - time spent 9
+2015-09-29 16:38:26,496 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action Return
+2015-09-29 16:38:26,502 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action Return - time spent 6
+2015-09-29 16:38:32,976 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action Return
+2015-09-29 16:38:32,991 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action Return - time spent 15
+2015-09-29 16:38:33,001 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action Index
+2015-09-29 16:38:33,006 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action Index - time spent 4
+2015-09-29 16:38:50,205 [12] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action SearchClient
+2015-09-29 16:38:50,284 [12] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action SearchClient - time spent 79
+2015-09-29 16:38:54,534 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action SearchClient
+2015-09-29 16:38:54,554 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action SearchClient - time spent 20
+2015-09-29 16:38:56,818 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action SearchClient
+2015-09-29 16:38:56,821 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action SearchClient - time spent 2
+2015-09-29 16:39:03,555 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action SelectClient
+2015-09-29 16:39:03,556 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action SelectClient - time spent 1
+2015-09-29 16:39:03,574 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action SearchCar
+2015-09-29 16:39:03,644 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action SearchCar - time spent 70
+2015-09-29 16:39:14,787 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action SearchCar
+2015-09-29 16:39:14,802 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action SearchCar - time spent 15
+2015-09-29 16:39:19,246 [12] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action SearchCar
+2015-09-29 16:39:19,261 [12] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action SearchCar - time spent 15
+2015-09-29 16:39:24,043 [12] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action SearchCar
+2015-09-29 16:39:24,056 [12] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action SearchCar - time spent 12
+2015-09-29 16:39:28,343 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action SearchCar
+2015-09-29 16:39:28,353 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action SearchCar - time spent 9
+2015-09-29 16:39:30,363 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action SelectCar
+2015-09-29 16:39:30,363 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action SelectCar - time spent 0
+2015-09-29 16:39:30,425 [13] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action ReviewRent
+2015-09-29 16:39:30,425 [13] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action ReviewRent - time spent 0
+2015-09-29 16:39:36,277 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action ReviewRent
+2015-09-29 16:39:36,353 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action ReviewRent - time spent 76
+2015-09-29 16:39:36,361 [9] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action Index
+2015-09-29 16:39:36,370 [9] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action Index - time spent 8
+2015-09-29 16:41:06,679 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Client, action Index
+2015-09-29 16:41:06,682 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Client, action Index - time spent 4
+2015-09-29 16:41:08,843 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Client, action Details
+2015-09-29 16:41:08,852 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Client, action Details - time spent 8
+2015-09-29 16:41:10,868 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Client, action Details
+2015-09-29 16:41:10,870 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Client, action Details - time spent 1
+2015-09-29 16:41:11,450 [13] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Client, action Details
+2015-09-29 16:41:11,452 [13] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Client, action Details - time spent 1
+2015-09-29 16:41:12,307 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Client, action Details
+2015-09-29 16:41:12,308 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Client, action Details - time spent 1
+2015-09-29 16:41:12,727 [13] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Client, action Details
+2015-09-29 16:41:12,729 [13] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Client, action Details - time spent 1
+2015-09-29 16:41:21,830 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Client, action Details
+2015-09-29 16:41:21,832 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Client, action Details - time spent 1
+2015-09-29 16:41:22,357 [9] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Client, action Details
+2015-09-29 16:41:22,358 [9] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Client, action Details - time spent 1
+2015-09-29 16:41:23,016 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Client, action Details
+2015-09-29 16:41:23,017 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Client, action Details - time spent 1
+2015-09-29 20:02:08,982 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Index
+2015-09-29 20:02:16,748 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Index - time spent 7767
+2015-09-29 20:02:52,986 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Index
+2015-09-29 20:02:52,999 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Index - time spent 13
+2015-09-29 20:05:58,154 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Index
+2015-09-29 20:06:01,840 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Index - time spent 3686
+2015-09-29 20:06:18,339 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:06:18,384 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SelectManufacturer - time spent 44
+2015-09-29 20:06:23,834 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:06:23,840 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SelectManufacturer - time spent 6
+2015-09-29 20:06:28,620 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:06:28,644 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SelectManufacturer - time spent 24
+2015-09-29 20:06:35,868 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:09:30,677 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Index
+2015-09-29 20:09:34,952 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Index - time spent 4277
+2015-09-29 20:09:41,890 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:09:41,933 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SelectManufacturer - time spent 42
+2015-09-29 20:09:46,262 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:09:46,268 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SelectManufacturer - time spent 5
+2015-09-29 20:09:49,129 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:09:49,152 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SelectManufacturer - time spent 23
+2015-09-29 20:10:01,366 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:10:01,369 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SelectManufacturer - time spent 2
+2015-09-29 20:10:03,121 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:10:03,145 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SelectManufacturer - time spent 24
+2015-09-29 20:10:12,653 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:11:56,110 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SelectManufacturer - time spent 103456
+2015-09-29 20:17:59,468 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Index
+2015-09-29 20:18:03,618 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Index - time spent 4150
+2015-09-29 20:18:10,900 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:18:10,948 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SelectManufacturer - time spent 47
+2015-09-29 20:18:13,391 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:18:22,961 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SelectManufacturer - time spent 8812
+2015-09-29 20:19:42,580 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Index
+2015-09-29 20:19:46,475 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Index - time spent 3894
+2015-09-29 20:19:54,195 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:19:54,239 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SelectManufacturer - time spent 43
+2015-09-29 20:19:56,153 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:20:05,719 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SelectManufacturer - time spent 9565
+2015-09-29 20:20:50,249 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:20:50,273 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SelectManufacturer - time spent 23
+2015-09-29 20:20:52,575 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:21:01,458 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SelectManufacturer - time spent 8202
+2015-09-29 20:28:02,610 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Index
+2015-09-29 20:28:08,293 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Index - time spent 5682
+2015-09-29 20:28:34,196 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:28:34,238 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SelectManufacturer - time spent 43
+2015-09-29 20:28:35,819 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:30:51,809 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Index
+2015-09-29 20:30:55,163 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Index - time spent 3353
+2015-09-29 20:31:36,461 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SortByLicensePlate
+2015-09-29 20:31:36,472 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SortByLicensePlate - time spent 10
+2015-09-29 20:31:37,134 [12] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SortByName
+2015-09-29 20:31:37,144 [12] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SortByName - time spent 9
+2015-09-29 20:31:37,884 [13] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:31:37,928 [13] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SelectManufacturer - time spent 44
+2015-09-29 20:31:39,947 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action SelectManufacturer
+2015-09-29 20:31:49,381 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action SelectManufacturer - time spent 9434
+2015-09-29 20:35:34,933 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Create
+2015-09-29 20:35:38,472 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Create - time spent 3538
+2015-09-29 20:38:24,618 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Index
+2015-09-29 20:38:28,282 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Index - time spent 3664
+2015-09-29 20:38:40,851 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Create
+2015-09-29 20:38:40,852 [11] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Create - time spent 0
+2015-09-29 20:40:40,886 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Index
+2015-09-29 20:40:44,260 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Index - time spent 3373
+2015-09-29 20:40:49,702 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Create
+2015-09-29 20:40:49,749 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Create - time spent 47
+2015-09-29 20:41:02,213 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Create
+2015-09-29 20:41:02,221 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Create - time spent 7
+2015-09-29 20:41:02,232 [14] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Index
+2015-09-29 20:41:02,243 [14] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Index - time spent 11

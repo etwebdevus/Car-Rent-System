@@ -12,8 +12,8 @@ using WebApplication.ViewModel;
 using AutoMapper;
 using WebApplication.ViewModel.Model;
 using ServiceClassLibrary.Interfaces;
-using ServiceClassLibrary.ManufacturerServices;
-using ServiceClassLibrary.ModelServices;
+using ServiceClassLibrary.ManufacturerServiceLayer;
+using ServiceClassLibrary.ModelServiceLayer;
 
 namespace WebApplication.Controllers
 {

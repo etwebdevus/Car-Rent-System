@@ -1,0 +1,50 @@
+﻿@model WebApplication.ViewModel.Rent.RentViewModel
+
+<h2>Return</h2>
+
+<h3>Are you sure you want to return this car?</h3>
+
+<hr />
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(x => x.ManufacturerName)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(x => x.ManufacturerName)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(x => x.ModelName)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(x => x.ModelName)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(x => x.Price)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(x => x.Price)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(x => x.UserName)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(x => x.UserName)
+    </dd>
+</dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Return" class="btn btn-default" /> |
+            @Html.ActionLink("Back", "Index")
+        </div>
+    }

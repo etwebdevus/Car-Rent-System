@@ -11,7 +11,7 @@ using ModelLayerClassLibrary.Repositories;
 using WebApplication.ViewModel.Client;
 using AutoMapper;
 using ModelLayerClassLibrary.Abstract;
-using ServiceClassLibrary.UserServices;
+using ServiceClassLibrary.UserServiceLayer;
 using ServiceClassLibrary.Interfaces;
 
 namespace WebApplication.Controllers

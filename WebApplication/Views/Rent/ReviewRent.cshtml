@@ -1,0 +1,63 @@
+﻿@model WebApplication.ViewModel.Rent.RentViewModel
+
+<h2>Review Rent</h2>
+
+<h4>Car</h4>
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.ManufacturerName)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.ManufacturerName)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ModelName)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.ModelName)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ModelEngine)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.ModelEngine)
+    </dd>
+</dl>
+
+<h4>User</h4>
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.UserName)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.UserName)
+    </dd>
+</dl>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.CarID)
+        @Html.HiddenFor(model => model.UserID)
+        <div class="form-group">
+            @Html.LabelFor(model => model.Days, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Days)
+                @Html.ValidationMessageFor(model => model.Days)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Rent" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}

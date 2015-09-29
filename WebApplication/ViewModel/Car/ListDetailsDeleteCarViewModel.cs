@@ -15,6 +15,8 @@ namespace WebApplication.ViewModel.Car
         public string LicensePlate { get; set; }
         [Display(Name = "Color")]
         public EnumColor CarColor { get; set; }
+        [Display(Name = "Price (R$)")]
+        public decimal Price { get; set; }
         [Display(Name = "Model")]
         public string ModelName { get; set; }
         [Display(Name = "Engine")]

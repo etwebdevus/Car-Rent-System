@@ -12,6 +12,8 @@ using WebApplication.ViewModel.Client;
 using WebApplication.ViewModel.Car;
 using ModelLayerClassLibrary.Utils;
 using ModelLayerClassLibrary.Enum;
+using WebApplication.ViewModel.Rent;
+using ModelLayerClassLibrary.Abstract;
 
 namespace WebApplication.App_Start
 {
@@ -52,6 +54,7 @@ namespace WebApplication.App_Start
 
             Mapper.CreateMap<CreateEditCarViewModel, Car>();
 
+
             //------------CLIENT------------//
             Mapper.CreateMap<Client, ClientViewModel>();
                 //.ForMember(dest => dest.AddressNumber, opt => opt.MapFrom(src => src.Address.Number))
@@ -89,6 +92,41 @@ namespace WebApplication.App_Start
                     City = src.AddressCity,
                     State = src.AddressState
                 }));
+
+
+            //------------RENT------------//
+            Mapper.CreateMap<Rent, RentViewModel>()
+                .ForMember(dst => dst.PickupDate, opt => opt.MapFrom(src => src.PickupDate.ToString("dd/mm/yyyy")))
+                .ForMember(dst => dst.ReturnDate, opt => opt.MapFrom(src => src.ReturnDate.ToString("dd/mm/yyyy")))
+                .ForMember(dst => dst.ManufacturerName, opt => opt.MapFrom(src => src.Car.Model.Manufacturer.Name))
+                .ForMember(dst => dst.ModelName, opt => opt.MapFrom(src => src.Car.Model.Name))
+                .ForMember(dst => dst.ModelEngine, opt => opt.MapFrom(src => src.Car.Model.Engine));
+                //.ForMember(dst => dst.CarList, opt => opt.MapFrom(src => 
+                //    {
+                //        List<ListDetailsDeleteCarViewModel> carVMList = new List<ListDetailsDeleteCarViewModel>();
+                //        List<Car> carList = (new CarRepository(new WebAppRentSysDbContext())).GetAll();
+                //        foreach (Car car in carList)
+                //        {
+                //                carVMList.Add(Mapper.Map<Car, ListDetailsDeleteCarViewModel>(car));
+                //        }
+                //        return carVMList;
+                //    }
+                //))
+                //.ForMember(dst => dst.UserList, opt => opt.MapFrom(src => 
+                //    {
+                //        List<ClientViewModel> userVMList = new List<ClientViewModel>();
+                //        List<User> userList = (new UserRepository(new WebAppRentSysDbContext())).GetAll();
+                //        foreach (User user in userList)
+                //        {
+                //                userVMList.Add(Mapper.Map<User, ClientViewModel>(user));
+                //        }
+                //        return userVMList;
+                //    }
+                //));
+            Mapper.CreateMap<RentViewModel, Rent>()
+                .ForMember(dst => dst.PickupDate, opt => opt.MapFrom(src => DateTime.Now))
+                .ForMember(dst => dst.ReturnDate, opt => opt.MapFrom(src => DateTime.Now.AddDays(src.Days)))
+                .ForMember(dst => dst.Price, opt => opt.MapFrom(src => (new CarRepository(new WebAppRentSysDbContext())).GetByID(src.CarID).Price * src.Days));
         }
     }
 }

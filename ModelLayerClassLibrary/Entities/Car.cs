@@ -16,6 +16,8 @@ namespace ModelLayerClassLibrary.Entities
         public int ModelID { get; set; }
         public virtual Model Model { get; set; }
 
+        public decimal Price { get; set; }
+
         public Car() { }
     }
 }

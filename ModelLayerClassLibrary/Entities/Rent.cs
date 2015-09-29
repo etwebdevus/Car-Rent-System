@@ -17,6 +17,13 @@ namespace ModelLayerClassLibrary.Entities
         public int UserID { get; set; }
         public virtual User User { get; set; }
 
+        public DateTime PickupDate { get; set; }
+
+        public DateTime ReturnDate { get; set; }
+
+        private decimal price;
+        public decimal Price { get; set; }
+
         public Rent() { }
     }
 }

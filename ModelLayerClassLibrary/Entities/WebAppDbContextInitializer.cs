@@ -165,49 +165,56 @@ namespace ModelLayerClassLibrary.Entities
             {
                 CarColor = EnumColor.Black,
                 LicensePlate = "qwe1234",
-                ModelID = 1
+                ModelID = 1,
+                Price = 50
             });
 
             rentSys.Cars.Add(new Car
             {
                 CarColor = EnumColor.White,
                 LicensePlate = "qwe1235",
-                ModelID = 2
+                ModelID = 2,
+                Price = 50
             });
 
             rentSys.Cars.Add(new Car
             {
                 CarColor = EnumColor.Gray,
                 LicensePlate = "qwe1236",
-                ModelID = 3
+                ModelID = 3,
+                Price = 70
             });
 
             rentSys.Cars.Add(new Car
             {
                 CarColor = EnumColor.Black,
                 LicensePlate = "qwe1237",
-                ModelID = 4
+                ModelID = 4,
+                Price = 100
             });
 
             rentSys.Cars.Add(new Car
             {
                 CarColor = EnumColor.Brown,
                 LicensePlate = "qwe1238",
-                ModelID = 5
+                ModelID = 5,
+                Price = 120
             });
 
             rentSys.Cars.Add(new Car
             {
                 CarColor = EnumColor.Red,
                 LicensePlate = "qwe1239",
-                ModelID = 7
+                ModelID = 7,
+                Price = 100
             });
 
             rentSys.Cars.Add(new Car
             {
                 CarColor = EnumColor.White,
                 LicensePlate = "qwe1214",
-                ModelID = 8
+                ModelID = 8,
+                Price = 50
             });
 
             rentSys.SaveChanges();
@@ -244,6 +251,35 @@ namespace ModelLayerClassLibrary.Entities
                 CreditCard = new CreditCard { Month = 12, Year = 2016, Name = "HENRIQUE", Number = "4564564564564564", SecurityNumber = "555" },
                 IsIndividual = true,
                 IDNumber = "43148833678"
+            });
+
+            rentSys.SaveChanges();
+            //------------RENTS INITIALIZE------------//
+            rentSys.Rents.Add(new Rent
+                {
+                    CarID = 7,
+                    UserID = 2,
+                    PickupDate = new DateTime(2015,09,27),
+                    ReturnDate = new DateTime(2015,09,28),
+                    Price = 200
+                });
+
+            rentSys.Rents.Add(new Rent
+            {
+                CarID = 2,
+                UserID = 3,
+                PickupDate = new DateTime(2015, 09, 27),
+                ReturnDate = new DateTime(2015, 10, 10),
+                Price = 200
+            });
+
+            rentSys.Rents.Add(new Rent
+            {
+                CarID = 4,
+                UserID = 1,
+                PickupDate = new DateTime(2015, 09, 27),
+                ReturnDate = new DateTime(2015, 09, 30),
+                Price = 300
             });
 
             rentSys.SaveChanges();

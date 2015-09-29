@@ -11,6 +11,14 @@
                                                                                                            })
         </th>
         <th>
+            @Ajax.ActionLink(Html.DisplayNameFor(model => model.Price).ToString(), "SortByPrice", new AjaxOptions
+                                                                                                           {
+                                                                                                               HttpMethod = "GET",
+                                                                                                               UpdateTargetId = "CarList",
+                                                                                                               InsertionMode = InsertionMode.Replace
+                                                                                                           })
+        </th>
+        <th>
             @Ajax.ActionLink(Html.DisplayNameFor(model => model.LicensePlate).ToString(), "SortByLicensePlate", new AjaxOptions
                                                                                                            {
                                                                                                                HttpMethod = "GET",
@@ -34,6 +42,9 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.ModelName)
+            </td>
+            <td>
+                R$ @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.LicensePlate)

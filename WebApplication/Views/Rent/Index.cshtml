@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebApplication.ViewModel.Rent.RentViewModel>
+
+<h2>Index</h2>
+
+<p>@Html.ActionLink("Make a rent", "SearchClient")</p>
+<div class="col-md-8">
+    <table class="table">
+        <tr>
+            <th>
+                Client
+            </th>
+            <th>
+                Pickup
+            </th>
+            <th>
+                Return
+            </th>
+            <th>
+                Price
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.PickupDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.ReturnDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Price)
+                </td>
+                <td>
+                    @Html.ActionLink("Return", "Return", new { RentID = item.RentID })
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<div class="clearfix"></div>

@@ -25,7 +25,7 @@ namespace UtilsValidation.UserValidation
         {
             if (name != "" && name != null && name.Length < 50)
             {
-                return true;
+                return Utils.OnlyChar(name);
             }
             else
             {

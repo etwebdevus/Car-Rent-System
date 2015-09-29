@@ -1,0 +1,84 @@
+﻿@model WebApplication.ViewModel.Rent.RentViewModel
+
+<h2>Select The Car</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.searchString, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+
+                @Html.EditorFor(model => model.searchString)
+                @Html.ValidationMessageFor(model => model.searchString)
+
+            </div>
+
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Search" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+
+
+@if (Model.CarList != null)
+{
+    <div class="col-md-8">
+        <table class="table">
+            <tr>
+                <th>
+                    Manufacturer
+                </th>
+                <th>
+                    Model
+                </th>
+                <th>
+                    Engine
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    License Plate
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.CarList)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => item.ManufacturerName)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(model => item.ModelName)
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.ModelEngine)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.LicensePlate)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Select", "SelectCar", new { CarID = item.CarID, ManufacturerName = item.ManufacturerName, ModelName = item.ModelName, ModelEngine = item.ModelEngine, UserID = Model.UserID, UserName = Model.UserName })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+    <div class="clearfix"></div>
+}

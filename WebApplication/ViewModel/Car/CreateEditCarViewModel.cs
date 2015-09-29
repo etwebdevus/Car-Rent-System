@@ -15,10 +15,15 @@ namespace WebApplication.ViewModel.Car
         public string LicensePlate { get; set; }
         [Display(Name = "Color")]
         public EnumColor CarColor { get; set; }
+        [Display(Name = "Price (R$)")]
+        public decimal Price { get; set; }
+        [Display(Name = "Model")]
         public string ModelID { get; set; }
+        [Display(Name = "Manufacturer")]
         public string ManufacturerID { get; set; }
-
+        
         public SelectList Manufacturers { get; set; }
+        
         public SelectList Models { get; set; }
     }
 }

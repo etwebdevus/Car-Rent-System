@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\ModelValidation.cs" />
+    <Compile Include="Model\NameAttribute.cs" />
+    <Compile Include="Manufacturer\NameAttribute.cs" />
+    <Compile Include="Manufacturer\ManufacturerValidation.cs" />
     <Compile Include="UserValidation\CreditCardNameAttribute.cs" />
     <Compile Include="UserValidation\DistrictAttribute.cs" />
     <Compile Include="UserValidation\StreetAttribute.cs" />
@@ -55,6 +59,9 @@
     <Compile Include="UserValidation\EmailAttribute.cs" />
     <Compile Include="UserValidation\IdNumberAttribute.cs" />
     <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Car\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

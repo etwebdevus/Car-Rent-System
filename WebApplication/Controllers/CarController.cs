@@ -11,13 +11,13 @@ using ModelLayerClassLibrary.Repositories;
 using WebApplication.ViewModel.Car;
 using AutoMapper;
 using ServiceClassLibrary.Interfaces;
-using ServiceClassLibrary.CarServices;
+using ServiceClassLibrary.CarServiceLayer;
 
 namespace WebApplication.Controllers
 {
     public class CarController : Controller
     {
-        private IService<Car> carServices = new CarServices();
+        private CarServices carServices = new CarServices();
 
         // GET: /Car/
         public ActionResult Index()
@@ -49,6 +49,19 @@ namespace WebApplication.Controllers
         public PartialViewResult SortByLicensePlate()
         {
             List<Car> cars = carServices.GetAll().OrderBy(x => x.LicensePlate).ToList();
+            List<ListDetailsDeleteCarViewModel> carsViewModel = new List<ListDetailsDeleteCarViewModel>();
+
+            foreach (Car car in cars)
+            {
+                carsViewModel.Add(Mapper.Map<Car, ListDetailsDeleteCarViewModel>(car));
+            }
+
+            return PartialView("_CarList", carsViewModel);
+        }
+
+        public PartialViewResult SortByPrice()
+        {
+            List<Car> cars = carServices.GetAll().OrderBy(x => x.Price).ToList();
             List<ListDetailsDeleteCarViewModel> carsViewModel = new List<ListDetailsDeleteCarViewModel>();
 
             foreach (Car car in cars)
@@ -94,8 +107,6 @@ namespace WebApplication.Controllers
         }
 
         // POST: /Car/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(CreateEditCarViewModel car)
@@ -107,7 +118,7 @@ namespace WebApplication.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View(car);
+            return View("Index", car);
         }
 
         // GET: /Car/Edit/5
@@ -171,13 +182,13 @@ namespace WebApplication.Controllers
             return RedirectToAction("Index");
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                carServices.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        //protected override void Dispose(bool disposing)
+        //{
+        //    if (disposing)
+        //    {
+        //        carServices.Dispose();
+        //    }
+        //    base.Dispose(disposing);
+        //}
     }
 }

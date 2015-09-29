@@ -46,11 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CarServices\CarServices.cs" />
+    <Compile Include="CarServiceLayer\CarServices.cs" />
     <Compile Include="Interfaces\IService.cs" />
-    <Compile Include="ManufacturerServices\ManufacturerServices.cs" />
-    <Compile Include="ModelServices\ModelServices.cs" />
-    <Compile Include="UserServices\UserServices.cs" />
+    <Compile Include="ManufacturerServiceLayer\ManufacturerServices.cs" />
+    <Compile Include="ModelServiceLayer\ModelServices.cs" />
+    <Compile Include="RentServiceLayer\RentServices.cs" />
+    <Compile Include="UserServiceLayer\UserServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

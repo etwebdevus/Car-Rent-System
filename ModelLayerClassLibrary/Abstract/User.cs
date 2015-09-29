@@ -47,27 +47,13 @@ namespace ModelLayerClassLibrary.Abstract
             set 
             {
                 value = value.Replace(".", "").Replace("-", "");
-                if (IsIndividual)
+                if (ClientValidation.ValidateCpf(value) || ClientValidation.ValidateCnpj(value))
                 {
-                    if (ClientValidation.ValidateCpf(value))
-                    {
-                        idnumber = value;
-                    }
-                    else
-                    {
-                        throw new ArgumentOutOfRangeException("Invalid CPF value found.");
-                    }
+                    idnumber = value;
                 }
                 else
                 {
-                    if (ClientValidation.ValidateCnpj(value))
-                    {
-                        idnumber = value;
-                    }
-                    else
-                    {
-                        throw new ArgumentOutOfRangeException("Invalid CNPJ value found.");
-                    }
+                    throw new ArgumentOutOfRangeException("Invalid ID Number value found.");
                 }
             }
         }
