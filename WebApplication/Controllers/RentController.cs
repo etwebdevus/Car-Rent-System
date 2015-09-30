@@ -15,12 +15,13 @@ using AutoMapper;
 using WebApplication.ViewModel.Client;
 using ModelLayerClassLibrary.Abstract;
 using WebApplication.ViewModel.Car;
+using ServiceClassLibrary.Interfaces;
 
 namespace WebApplication.Controllers
 {
     public class RentController : Controller
     {
-        private RentServices rentServices = new RentServices();
+        private IServiceRent rentServices = new RentServices();
 
         public ActionResult Index()
         {

@@ -12,11 +12,11 @@ using ModelLayerClassLibrary.Abstract;
 
 namespace ServiceClassLibrary.RentServiceLayer
 {
-    public class RentServices : IService<Rent>
+    public class RentServices : IServiceRent
     {
         private IRepository<Rent> rentRepo = new RentRepository(new WebAppRentSysDbContext());
         private IService<Car> carServices = new CarServices();
-        private UserServices userServices = new UserServices();
+        private IService<User> userServices = new UserServices();
 
         public List<User> GetAllUsers()
         {

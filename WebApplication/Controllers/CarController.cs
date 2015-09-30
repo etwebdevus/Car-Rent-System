@@ -17,7 +17,7 @@ namespace WebApplication.Controllers
 {
     public class CarController : Controller
     {
-        private CarServices carServices = new CarServices();
+        private IService<Car> carServices = new CarServices();
 
         // GET: /Car/
         public ActionResult Index()

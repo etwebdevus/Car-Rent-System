@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ServiceClassLibrary.CarServiceLayer
 {
-    public class CarServices : IService<Car>
+    public class CarServices : IServiceCar
     {
         private IRepository<Car> carRepo = new CarRepository(new WebAppRentSysDbContext());
         private IService<Model> modelService = new ModelServices();

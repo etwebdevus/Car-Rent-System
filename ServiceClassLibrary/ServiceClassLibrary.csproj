@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CarServiceLayer\CarServices.cs" />
+    <Compile Include="Interfaces\IServiceCar.cs" />
+    <Compile Include="Interfaces\IServiceRent.cs" />
     <Compile Include="Interfaces\IService.cs" />
     <Compile Include="ManufacturerServiceLayer\ManufacturerServices.cs" />
     <Compile Include="ModelServiceLayer\ModelServices.cs" />

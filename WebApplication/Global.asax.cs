@@ -1,4 +1,8 @@
 ﻿using AutoMapper;
+using Castle.Windsor;
+using Castle.Windsor.Installer;
+using Castle.MicroKernel.Registration;
+using Castle.MicroKernel.SubSystems.Configuration;
 using ModelLayerClassLibrary.Entities;
 using ModelLayerClassLibrary.Repositories;
 using System;
@@ -18,6 +22,7 @@ namespace WebApplication
     {
         protected void Application_Start()
         {
+            CastleConfig.Configure();
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
@@ -25,6 +30,23 @@ namespace WebApplication
 
             MapperConfig.RegisterMappers();
             DbConfig.RegisterDb();
+            BootstrapContainer();
+        }
+
+        public void Application_End()
+        {
+            CastleConfig.Unload();
+            container.Dispose();
+        }
+
+        private static IWindsorContainer container;
+
+        private static void BootstrapContainer()
+        {
+            container = new WindsorContainer()
+                .Install(FromAssembly.This());
+            var controllerFactory = new WindsorControllerFactory(container.Kernel);
+            ControllerBuilder.Current.SetControllerFactory(controllerFactory);
         }
     }
 }
