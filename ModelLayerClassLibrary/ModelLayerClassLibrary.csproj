@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Entities\Car.cs" />
     <Compile Include="Entities\Client.cs" />
+    <Compile Include="Entities\IWebAppRentSysDbContext.cs" />
     <Compile Include="Entities\Manufacturer.cs" />
     <Compile Include="Entities\Model.cs" />
     <Compile Include="Entities\Rent.cs" />

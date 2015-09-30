@@ -51,7 +51,7 @@ namespace ModelLayerClassLibrary.Entities
                 Name = "Uno",
                 Engine = 1,
                 ManufacturerID = 5,
-                Category = 2
+                Category = EnumCategory.Economy
             });
 
             rentSys.Models.Add(new Model
@@ -59,7 +59,7 @@ namespace ModelLayerClassLibrary.Entities
                 Name = "Uno",
                 Engine = 1.4,
                 ManufacturerID = 5,
-                Category = 8
+                Category = EnumCategory.Intermediate
             });
 
             rentSys.Models.Add(new Model
@@ -67,7 +67,7 @@ namespace ModelLayerClassLibrary.Entities
                 Name = "Bravo",
                 Engine = 2,
                 ManufacturerID = 5,
-                Category = 32
+                Category = EnumCategory.Premium
             });
 
             rentSys.Models.Add(new Model
@@ -75,7 +75,7 @@ namespace ModelLayerClassLibrary.Entities
                 Name = "Freemont",
                 Engine = 1,
                 ManufacturerID = 5,
-                Category = 48
+                Category = EnumCategory.SUV
             });
 
             rentSys.Models.Add(new Model
@@ -83,7 +83,7 @@ namespace ModelLayerClassLibrary.Entities
                 Name = "Renegade",
                 Engine = 2,
                 ManufacturerID = 4,
-                Category = 144
+                Category = EnumCategory.OffRoad
             });
             
             rentSys.Models.Add(new Model
@@ -91,7 +91,7 @@ namespace ModelLayerClassLibrary.Entities
                 Name = "Cherokee",
                 Engine = 2,
                 ManufacturerID = 4,
-                Category = 48
+                Category = EnumCategory.SUV
             });
 
             rentSys.Models.Add(new Model
@@ -99,7 +99,7 @@ namespace ModelLayerClassLibrary.Entities
                 Name = "Onix",
                 Engine = 1.4,
                 ManufacturerID = 3,
-                Category = 6
+                Category = EnumCategory.Intermediate
             });
 
             rentSys.Models.Add(new Model
@@ -107,7 +107,7 @@ namespace ModelLayerClassLibrary.Entities
                 Name = "S10",
                 Engine = 2,
                 ManufacturerID = 3,
-                Category = 128
+                Category = EnumCategory.OffRoad
             });
 
             rentSys.Models.Add(new Model
@@ -115,7 +115,7 @@ namespace ModelLayerClassLibrary.Entities
                 Name = "Ka",
                 Engine = 1.5,
                 ManufacturerID = 2,
-                Category = 6
+                Category = EnumCategory.Intermediate
             });
 
             rentSys.Models.Add(new Model
@@ -123,7 +123,7 @@ namespace ModelLayerClassLibrary.Entities
                 Name = "New Fiesta",
                 Engine = 1.5,
                 ManufacturerID = 2,
-                Category = 6
+                Category = EnumCategory.Intermediate
             });
 
             rentSys.Models.Add(new Model
@@ -131,7 +131,7 @@ namespace ModelLayerClassLibrary.Entities
                 Name = "New Fiesta",
                 Engine = 2,
                 ManufacturerID = 2,
-                Category = 32
+                Category = EnumCategory.Premium
             });
 
             rentSys.Models.Add(new Model
@@ -139,7 +139,7 @@ namespace ModelLayerClassLibrary.Entities
                 Name = "Gol",
                 Engine = 1,
                 ManufacturerID = 1,
-                Category = 2
+                Category = EnumCategory.Economy
             });
 
             rentSys.Models.Add(new Model
@@ -147,7 +147,7 @@ namespace ModelLayerClassLibrary.Entities
                 Name = "Jetta",
                 Engine = 2,
                 ManufacturerID = 1,
-                Category = 32
+                Category = EnumCategory.Premium
             });
 
             rentSys.Models.Add(new Model
@@ -155,7 +155,7 @@ namespace ModelLayerClassLibrary.Entities
                 Name = "Amarok",
                 Engine = 2,
                 ManufacturerID = 1,
-                Category = 160
+                Category = EnumCategory.OffRoad
             });
 
             rentSys.SaveChanges();

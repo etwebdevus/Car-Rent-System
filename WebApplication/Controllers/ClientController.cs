@@ -65,9 +65,17 @@ namespace WebApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                userServices.Add(Mapper.Map<ClientViewModel, Client>(client));
-                userServices.Save();
-                return RedirectToAction("Index");
+                try
+                {
+                    userServices.Add(Mapper.Map<ClientViewModel, Client>(client));
+                    userServices.Save();
+                    return RedirectToAction("Index");
+                }
+                catch (ArgumentOutOfRangeException ex)
+                {
+                    HandleErrorInfo error = new HandleErrorInfo(ex, "CarController", "Create");
+                    return View("Error", error);
+                }
             }
 
             return View(client);
@@ -97,9 +105,17 @@ namespace WebApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                userServices.Update((Mapper.Map<ClientViewModel, Client>(client)));
-                userServices.Save();
-                return RedirectToAction("Index");
+                try
+                {
+                    userServices.Update((Mapper.Map<ClientViewModel, Client>(client)));
+                    userServices.Save();
+                    return RedirectToAction("Index");
+                }
+                catch (ArgumentOutOfRangeException ex)
+                {
+                    HandleErrorInfo error = new HandleErrorInfo(ex, "CarController", "Create");
+                    return View("Error", error);
+                }
             }
             return View(client);
         }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ServiceClassLibrary.Interfaces
 {
-    interface IServiceCar : IService<Car>
+    public interface IServiceCar : IService<Car>
     {
         List<Model> GetModels(int manuId);
     }

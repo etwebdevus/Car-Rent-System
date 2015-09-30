@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ModelLayerClassLibrary.Enum;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace ModelLayerClassLibrary.Entities
         
         public string Name { get; set; }
         public double Engine { get; set; }
-        public int Category { get; set; }
+        public EnumCategory Category { get; set; }
 
         public int ManufacturerID { get; set; }
         public virtual Manufacturer Manufacturer { get; set; }

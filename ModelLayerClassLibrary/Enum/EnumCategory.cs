@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModelLayerClassLibrary.Enum
 {
-    [Flags]
+
     public enum EnumCategory
     {
         None = 0,

@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Car\CarValidation.cs" />
+    <Compile Include="Car\PriceValAttribute.cs" />
+    <Compile Include="Car\LicensePlateValAttribute.cs" />
     <Compile Include="Model\ModelValidation.cs" />
     <Compile Include="Model\NameAttribute.cs" />
     <Compile Include="Manufacturer\NameAttribute.cs" />
@@ -60,9 +63,7 @@
     <Compile Include="UserValidation\IdNumberAttribute.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Car\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

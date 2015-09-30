@@ -42,7 +42,7 @@ namespace UtilsValidation
             foreach (char ch in str)
             {
                 //if (((ch < 'a' || ch > 'z') && (ch < 'A' || ch > 'Z') && (ch < '0' || ch > '9')) && ch != ' ')
-                if (!char.IsLetter(ch) && !(ch < '0' || ch > '9') && ch != ' ')
+                if (!char.IsLetter(ch) && !(ch >= '0' && ch <= '9') && ch != ' ')
                 {
                     return false;
                 }

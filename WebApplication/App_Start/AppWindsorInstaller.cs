@@ -1,13 +1,12 @@
-﻿using System;
+﻿using Castle.MicroKernel.Registration;
+using Castle.MicroKernel.SubSystems.Configuration;
+using Castle.Windsor;
+using ModelLayerClassLibrary.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using ModelLayerClassLibrary.Entities;
-using Castle.Windsor;
-using Castle.Windsor.Installer;
-using Castle.MicroKernel.Registration;
-using Castle.MicroKernel.SubSystems.Configuration;
 
 namespace WebApplication.App_Start
 {
@@ -15,7 +14,7 @@ namespace WebApplication.App_Start
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Register(Component.For<WebAppDbContextInitializer>().LifestylePerWebRequest());
+            //container.Register(Component.For<WebAppRentSysDbContext>().LifestylePerWebRequest());
             container.Register(Classes.FromThisAssembly().BasedOn<Controller>().LifestyleTransient());
         }
     }

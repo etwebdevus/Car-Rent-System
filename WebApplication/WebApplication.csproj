@@ -277,6 +277,7 @@
     <Content Include="Views\Rent\ReviewRent.cshtml" />
     <Content Include="Views\Rent\Index.cshtml" />
     <Content Include="Views\Rent\Return.cshtml" />
+    <Content Include="Views\Shared\CustomErro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

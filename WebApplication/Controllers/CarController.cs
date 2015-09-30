@@ -113,9 +113,17 @@ namespace WebApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                carServices.Add(Mapper.Map<CreateEditCarViewModel, Car>(car));
-                carServices.Save();
-                return RedirectToAction("Index");
+                try
+                {
+                    carServices.Add(Mapper.Map<CreateEditCarViewModel, Car>(car));
+                    carServices.Save();
+                    return RedirectToAction("Index");
+                }
+                catch (ArgumentOutOfRangeException ex)
+                {
+                    HandleErrorInfo error = new HandleErrorInfo(ex, "CarController", "Create");
+                    return View("Error", error);
+                }
             }
 
             return View("Index", car);
@@ -148,9 +156,17 @@ namespace WebApplication.Controllers
 
             if (ModelState.IsValid)
             {
-                carServices.Update(car);
-                carServices.Save();
-                return RedirectToAction("Index");
+                try
+                {
+                    carServices.Update(car);
+                    carServices.Save();
+                    return RedirectToAction("Index");
+                }
+                catch (ArgumentOutOfRangeException ex)
+                {
+                    HandleErrorInfo error = new HandleErrorInfo(ex, "CarController", "Create");
+                    return View("Error", error);
+                }
             }
 
             return View(carMvm);

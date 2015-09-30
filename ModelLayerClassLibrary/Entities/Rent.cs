@@ -21,7 +21,6 @@ namespace ModelLayerClassLibrary.Entities
 
         public DateTime ReturnDate { get; set; }
 
-        private decimal price;
         public decimal Price { get; set; }
 
         public Rent() { }

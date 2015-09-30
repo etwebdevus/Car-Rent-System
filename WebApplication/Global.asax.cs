@@ -15,6 +15,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using WebApplication.App_Start;
 using WebApplication.ViewModel.Model;
+using WebApplication.Plumbind;
 
 namespace WebApplication
 {
@@ -22,7 +23,7 @@ namespace WebApplication
     {
         protected void Application_Start()
         {
-            CastleConfig.Configure();
+            //CastleConfig.Configure();
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
@@ -30,7 +31,7 @@ namespace WebApplication
 
             MapperConfig.RegisterMappers();
             DbConfig.RegisterDb();
-            BootstrapContainer();
+            //BootstrapContainer();
         }
 
         public void Application_End()

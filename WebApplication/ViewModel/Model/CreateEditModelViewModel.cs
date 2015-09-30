@@ -6,6 +6,7 @@ using ModelLayerClassLibrary.Entities;
 using System.Web.Mvc;
 using System.ComponentModel.DataAnnotations;
 using UtilsValidation.Model;
+using ModelLayerClassLibrary.Enum;
 
 namespace WebApplication.ViewModel.Model
 {
@@ -21,7 +22,7 @@ namespace WebApplication.ViewModel.Model
         [Range(0.5,4)]
         public double Engine { get; set; }
         [Required]
-        public int Category { get; set; }
+        public EnumCategory Category { get; set; }
         [Required]
         public int ManufacturerID { get; set; }
 
