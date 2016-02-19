@@ -1,5 +1,6 @@
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\UnitTest.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\UnitTest.pdb
+C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\ModelLayerClassLibrary.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\Moq.dll
 C:\Users\Hartur\Documents\GitHub\RentACar\UnitTest\bin\Debug\ServiceClassLibrary.dll
