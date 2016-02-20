@@ -277,3 +277,75 @@
 2015-09-30 01:44:47,465 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Create - time spent 4286
 2015-09-30 02:09:24,614 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Home, action Index
 2015-09-30 02:09:24,643 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Home, action Index - time spent 29
+2016-02-18 23:56:16,020 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Home, action Index
+2016-02-18 23:56:16,077 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Home, action Index - time spent 58
+2016-02-18 23:56:28,801 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Manufacturer, action Index
+2016-02-18 23:57:22,390 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Model, action Index
+2016-02-19 00:01:18,360 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Manufacturer, action Index - time spent 289560
+2016-02-19 00:01:47,463 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Model, action Index - time spent 265073
+2016-02-19 00:06:11,793 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Home, action Index
+2016-02-19 00:06:11,815 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Home, action Index - time spent 22
+2016-02-19 00:06:25,421 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Manufacturer, action Index
+2016-02-19 00:07:24,077 [6] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Manufacturer, action Index - time spent 58655
+2016-02-19 10:35:53,150 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Home, action Index
+2016-02-19 10:35:53,184 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Home, action Index - time spent 34
+2016-02-19 10:36:21,014 [7] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Manufacturer, action Index
+2016-02-19 10:36:32,927 [7] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Manufacturer, action Index - time spent 11912
+2016-02-19 10:38:08,103 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Home, action Index
+2016-02-19 10:38:08,103 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Home, action Index - time spent 0
+2016-02-19 10:38:13,808 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Manufacturer, action Index
+2016-02-19 10:38:13,810 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Manufacturer, action Index - time spent 1
+2016-02-19 10:38:30,661 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Index
+2016-02-19 10:38:30,772 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Index - time spent 110
+2016-02-19 10:39:23,702 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Details
+2016-02-19 10:39:23,859 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Details - time spent 157
+2016-02-19 10:39:34,096 [16] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Index
+2016-02-19 10:39:34,104 [16] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Index - time spent 7
+2016-02-19 10:39:42,913 [7] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Details
+2016-02-19 10:39:42,916 [7] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Details - time spent 2
+2016-02-19 22:42:02,101 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Index
+2016-02-19 22:42:17,616 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Index - time spent 15515
+2016-02-19 22:42:29,301 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Details
+2016-02-19 22:42:29,568 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Details - time spent 267
+2016-02-19 22:42:36,429 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Details
+2016-02-19 22:42:36,432 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Details - time spent 2
+2016-02-19 22:42:44,869 [7] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Index
+2016-02-19 22:42:44,879 [7] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Index - time spent 9
+2016-02-19 22:42:49,608 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Car, action Details
+2016-02-19 22:42:49,613 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Car, action Details - time spent 4
+2016-02-19 22:43:03,118 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action Index
+2016-02-19 22:43:03,194 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action Index - time spent 75
+2016-02-19 22:43:07,874 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Client, action Index
+2016-02-19 22:43:08,174 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Client, action Index - time spent 299
+2016-02-19 22:43:16,857 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action Index
+2016-02-19 22:43:16,862 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action Index - time spent 5
+2016-02-19 22:43:18,686 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action SearchClient
+2016-02-19 22:43:18,729 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action SearchClient - time spent 42
+2016-02-19 22:43:26,369 [8] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action SearchClient
+2016-02-19 22:43:26,374 [8] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action SearchClient - time spent 5
+2016-02-19 22:43:37,654 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action Index
+2016-02-19 22:43:37,656 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action Index - time spent 2
+2016-02-19 22:43:41,514 [8] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action SearchClient
+2016-02-19 22:43:41,514 [8] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action SearchClient - time spent 0
+2016-02-19 22:43:45,497 [8] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action SearchClient
+2016-02-19 22:43:45,499 [8] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action SearchClient - time spent 2
+2016-02-19 22:43:48,700 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action SelectClient
+2016-02-19 22:43:48,702 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action SelectClient - time spent 2
+2016-02-19 22:43:49,066 [9] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action SearchCar
+2016-02-19 22:43:49,066 [9] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action SearchCar - time spent 0
+2016-02-19 22:43:53,753 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action SearchCar
+2016-02-19 22:43:53,767 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action SearchCar - time spent 14
+2016-02-19 22:43:58,056 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action SearchCar
+2016-02-19 22:43:58,068 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action SearchCar - time spent 11
+2016-02-19 22:44:07,125 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action SelectCar
+2016-02-19 22:44:07,126 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action SelectCar - time spent 0
+2016-02-19 22:44:07,543 [8] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action ReviewRent
+2016-02-19 22:44:07,544 [8] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action ReviewRent - time spent 0
+2016-02-19 22:44:20,839 [13] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action ReviewRent
+2016-02-19 22:44:20,901 [13] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action ReviewRent - time spent 62
+2016-02-19 22:44:21,244 [9] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action Index
+2016-02-19 22:44:21,258 [9] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action Index - time spent 14
+2016-02-19 22:44:46,080 [9] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action Return
+2016-02-19 22:44:46,093 [9] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action Return - time spent 12
+2016-02-19 22:44:53,086 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Executing controller Rent, action Index
+2016-02-19 22:44:53,094 [5] DEBUG WebApplication.App_Start.LoggingFilterAttribute - Finished executing controller Rent, action Index - time spent 7
